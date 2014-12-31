@@ -22,6 +22,7 @@ layout: default
   {% endif %}
 </div>
 
+{% if site.related_posts %}
 <aside class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
@@ -37,4 +38,4 @@ layout: default
     {% endfor %}
   </ul>
 </aside>
-
+{% endif %}
