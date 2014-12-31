@@ -12,11 +12,11 @@ layout: default
   {% if page.previous %}
     <a class="pagination-item older" href="{{page.previous.url | prepend: site.baseurl | prepend: site.url }}">Older</a>
   {% else %}
-    <span class="pagination-item older">Older</span>
+    <span class="pagination-item older">Oldest</span>
   {% endif %}
 
   {% if page.next %}
-    <a class="pagination-item newer" href="{{page.next.url | prepend: site.baseurl | prepend: site.url }}">Newest</a>
+    <a class="pagination-item newer" href="{{page.next.url | prepend: site.baseurl | prepend: site.url }}">Newer</a>
   {% else %}
     <span class="pagination-item newer">Newest</span>
   {% endif %}
