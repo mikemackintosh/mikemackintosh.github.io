@@ -3,17 +3,13 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Poole
-tagline:          The Jekyll Butler
-url:              http://getpoole.com
+title:            Mike Mackintosh
+tagline:          Cybertube Home of Mike Mackintosh
+url:              http://www.mikemackintosh.com
 paginate:         1
 baseurl:          /
 author:
-  name:           Mark Otto
-  url:            https://twitter.com/mdo
-  email:          markdotto@gmail.com
-
-# Custom vars
-version:          1.0.0
-github:
-  repo:           https://github.com/poole/poole
+  name:           Mike Mackintosh
+  url:            https://twitter.com/mikemackintosh
+  ghurl:          https://github.com/mikemackintosh
+  email:          mike@rocketho.me
