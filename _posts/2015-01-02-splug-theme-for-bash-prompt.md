@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Splug Theme for bash prompt
----
+category: system-administration
+tags: bash prompt bashit
+------
 
 ![splug bash prompt](https://www.dropbox.com/s/qrn0ysvuzu10afu/Screenshot%202014-11-09%2022.12.57.png?dl=1)
 

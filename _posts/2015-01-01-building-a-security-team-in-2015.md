@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Building a Security Team in 2015
+category: security
+tags: 2015-security trends management
 ---
 > It is late, and I'm tired, but wanted to jot this down before I fell asleep. Revisions and corrections to follow.
 
