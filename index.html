@@ -19,7 +19,9 @@ title: Home
   {% endfor %}
 </div>-->
 {% for post in site.posts %}  
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.category }} . <a href="/{{ post.url }}"></a></small></p>      
+    <p>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <small><strong>{{ post.date | date: "%B %e, %Y" }}</strong>. <strong>{{ post.category }}</strong>. <a href="/{{ post.url }}"></a></small>
+    </p>      
 {% endfor %}  
 
