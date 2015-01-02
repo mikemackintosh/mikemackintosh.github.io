@@ -20,7 +20,17 @@ Security used to easily be defined as:
 
 This worked great for the most part. It defined responsibilities to specific security teams. But the problem with this is there is no clear involvement to preventing these problems, or even detecting them.
 
-### The New Model (Hackintosh Security Model)
+### The New Model (HSF/ Hackintosh Security Framework)
+
+The new security model I will be implementing follows the following general idea: Justify headcount and prove justification.
+
+It consists of three parts:
+
+  - DefSec
+  - OpSec
+  - SecEng
+
+You can learn more about these below.
 
 #### DefSec
 
