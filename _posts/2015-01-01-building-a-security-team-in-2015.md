@@ -2,7 +2,7 @@
 layout: post
 title: Building a Security Team in 2015
 ---
-> It is late, and I'm tired, but wanted to jot this down before I fell asleep.
+> It is late, and I'm tired, but wanted to jot this down before I fell asleep. Revisions and corrections to follow.
 
 In my professional experience, compliance is not security. So, clearly, being compliant is not being secure. There are aspects of compliance which increase security, but they are more in the realm of operations and work flows (think PCI and SOX). What is being secure, is understanding what's happening on your network, within your apps or on your servers, and mission critical files being accessed. Visibility is not everything, yet it is everything at the same time. Without having visibility, you don't know what to secure. You don't know what's being targeted, and you sure as hell don't know what's already been pwned. Visibility also means expressing your impact to executive teams and stakeholders.
 
