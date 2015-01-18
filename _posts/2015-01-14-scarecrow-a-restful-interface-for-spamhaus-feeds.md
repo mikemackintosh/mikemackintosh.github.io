@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scarecrow - A RESTful Interface For Spamhaus Feeds
-tags: 
+tags: dns spamhaus brute-force dictionary-attack spam rest ruby
 ---
 
 Scarecrow is the easiest way to consume the Spamhaus feeds which is traditionally powered by DNS. Although effective in SMTP services, I've found much benefit in using it to protect web apps from malicious and fraudulent behavior. Although it's simple to query DNS is most common web languages, it comes with headaches, buffer and cache issues, as well as control of which servers you actually hit.
