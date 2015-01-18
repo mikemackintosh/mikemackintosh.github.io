@@ -2,6 +2,7 @@
 layout: post
 title: Generating OpenVPN Client Certs with Ruby
 tags: ruby openssl openvpn gem ssl
+category: system-administration
 ---
 
 I was working on a project recently that dealt with generating and revoking SSL certs for OpenVPN clients in a simple and automated fashion, without paying for Access Server. Easy-RSA is easy to use, but totally unsecure to automate (think Shellshock..), and in order to replicate certs for backup, I would need to rsync, GlusterFS or some weird file transfer hacks. In all honesty, it would have been easier to save encrypted certs to a database so the end user can easily pull them down when needed.
