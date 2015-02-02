@@ -5,66 +5,19 @@ tags: ip network ruby whitelist blacklist
 category: networking
 ---
 
-This class was created to be exactly what it's called, damn simple. 
+This class was created to be exactly what it's called, damn simple white-listing. <span class="mute">(And for those captain-obvious' out there, yes, you can make it a black-list too. I'm so proud of you!)</span>
 
-You can pass it whitelists, in the `WHITELIST_IPS` constant (which is an array), or in a file, `ENV['WHITELIST_FILE']` (and it defaults to `/etc/whitelist`).
+You can pass it whitelists if the form of a file. The default location for the `WHITELIST_FILE` is `/etc/whitelist`, and takes 1 IP range or host per line. It will only parse legit IP's, which are validated using the `IPAddress` gem. 
 
-**Note:** It does require a 3rd-party library, `ipaddress`. 
+You can also pass a hard-coded array in `WHITELIST_IPS`. These are good for local addresses that should never be blocked.
 
-## Install 
-`gem install ipaddress`
+**Note:** This script does require a 3rd-party library, `ipaddress`. You can get that installed using `gem install ipaddress`.
 
-## damnsimplewhitelist.rb
 
-    require 'ipaddress'
+## Usage
 
-    # Create Whitelist
-    class DamnSimpleWhitelist
-      WHITELIST_FILE = ENV['WHITELIST_FILE'] || '/etc/whitelist'
-      WHITELIST_IPS = ['10.0.0.0/8']
-      @@ips = Array.new
+I don't think it can get much easier than this:
 
-      def initialize()
-        @@ips = WHITELIST_IPS.inject(Array.new) {|ips,ip| @@ips.push(IPAddress ip) }
-        if File.exists?(WHITELIST_FILE)
-          @@ips.push(*parse_whitelist(WHITELIST_FILE))
-        end
-      end
-
-      def all
-        @@ips
-      end
-
-      def has?(ipaddr)
-        @@ips.any? {|ip| ip.include?(ipaddr) }
-      end
-
-      private
-      
-      def parse_whitelist(whitelist)
-      
-        whitelisted = Array.new
-        File.readlines(whitelist).each do |line|
-          line.chomp!
-          begin
-            whitelisted.push(IPAddress line)
-          rescue
-          end
-        end
-
-        whitelisted
-      
-      end
-
-    end
-
-## Usage:
-
-It's really simple to use:
-
-    w = DamnSimpleWhitelist.new
-    if w.has? 10.1.1.1
-        # Allowed!
-    end
+{% gist mikemackintosh/80d4538d67b070878c9f %}
 
 If you want to get all whitelisted IP addresses, you can use the `#all` method. 
