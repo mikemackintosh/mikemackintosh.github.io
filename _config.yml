@@ -1,10 +1,12 @@
 # Permalinks
 permalink:        pretty
 relative_permalinks: true
+markdown: redcarpet
+extensions: [fenced_code_blocks]
 
 # Setup
 title:            Mike Mackintosh
-tagline:          All the shit I need to write down because I'm getting old
+tagline:          and some of the really cool shit that i've done
 url:              http://www.mikemackintosh.com
 paginate:         1
 baseurl:          /
