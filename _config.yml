@@ -1,5 +1,5 @@
 # Permalinks
-permalink: /:categories/:year/:month/:day/:title
+permalink: pretty
 production_url : http://www.mikemackintosh.com
 #relative_permalinks: true
 markdown: redcarpet

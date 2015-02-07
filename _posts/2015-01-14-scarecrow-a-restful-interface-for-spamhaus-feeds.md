@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scarecrow - A RESTful Interface For Spamhaus Feeds
+title: Hello Scarecrow, A RESTful Interface For Spamhaus Feeds
 tags: dns spamhaus brute-force dictionary-attack spam rest ruby
 category: web-apps
 ---

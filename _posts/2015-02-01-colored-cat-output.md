@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Want Colored `cat` Output?
+title: Syntax Highlighting With Cat
 tags: config-management output cat source-code
 ---
 
@@ -8,4 +8,4 @@ If you read a lot of source code or configuration files, and you're a loser that
 
 {% gist mikemackintosh/173d85eb03c0645cd110 %}
 
-It will make your stupid output look pretty. 
+It will make your stupid output look pretty hot. 
