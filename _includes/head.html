@@ -1,13 +1,11 @@
 <head>
   <meta charset="UTF-8">
   <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta name="google-site-verification" content="CuRwIbDP2wUjusIt3KgN5XY-ZSgkv4YNPv7szOVSouc" />
   
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <!-- Some stupid SEO stuff -->
-  <meta name="description" content="Mike Mackintosh writes down so many awesome things, you are guaranteed to learn something new by reading some of his articles.">
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
   <link rel=”author” href=”https://twitter.com/mikemackintosh“/>
   <meta name=”twitter:card” content=”summary”>
@@ -20,15 +18,30 @@
   <meta name=”twitter:title” content=”{{ page.title }}”>  
   <title>{{ page.title }} &middot; {{ site.title }}</title>
   {% endif %}
+  
+  <!-- Descripti0nz -->
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% else %}
+  <meta name="description" content="Mike Mackintosh writes down so many awesome things, you are guaranteed to learn something new by reading some of his articles.">
+  {% endif %}
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
+  <!--link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css"-->
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-precomposed.png">
+  <link rel="icon" type="image/png" href="/favicon.png" />
 
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}atom.xml">
+
+  <link href="{{ site.baseurl }}public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!--[if lt IE 9]>
+      <script src="{{ site.baseurl }}public/respond/Respond.min.js"></script>
+    <![endif]-->
+
+  <link href="{{ site.baseurl }}rss.xml" type="application/rss+xml" rel="alternate" title="MikeMackintosh RSS Feed">  
 </head>
