@@ -1,7 +1,9 @@
 # Permalinks
-permalink:        pretty
-relative_permalinks: true
+permalink: /:categories/:year/:month/:day/:title
+production_url : http://www.mikemackintosh.com
+#relative_permalinks: true
 markdown: redcarpet
+highlighter: pygments
 extensions: [fenced_code_blocks]
 
 # Setup
@@ -15,3 +17,4 @@ author:
   url:            https://twitter.com/mikemackintosh
   ghurl:          https://github.com/mikemackintosh
   email:          mike@rocketho.me
+ASSET_PATH: /public/
