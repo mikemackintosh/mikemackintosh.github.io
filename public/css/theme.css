@@ -326,3 +326,12 @@ div.main-logo {
   background: url('/public/logo.png') rgb(107, 206, 243) center center no-repeat ;
   background-size: 40px;
 }
+
+p {
+  padding-bottom: 14px;
+}
+.fa {
+  margin-top:3px !important;
+  padding-right:4px;
+  color: #000;
+}
