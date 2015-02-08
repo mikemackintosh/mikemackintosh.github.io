@@ -1,8 +1,10 @@
 ---
 layout: page
-title : "Resume Of"
-header : "Mike Mackintosh's Resume"
+title : "Resume"
+header : "Mike Mackintosh"
+group: navigation
 ---
+
 # Mike Mackintosh
 ==================
 

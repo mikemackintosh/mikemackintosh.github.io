@@ -327,11 +327,36 @@ div.main-logo {
   background-size: 40px;
 }
 
-p {
-  padding-bottom: 14px;
-}
 .fa {
   margin-top:3px !important;
   padding-right:4px;
   color: #000;
+}
+
+div#jumbo {
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background:url('/public/logo.png')  rgb(22, 30, 39) center 72px no-repeat !important;
+  color: #fff;
+  margin-top: -20px;
+  display: block;
+  padding-top:412px;
+  width: 100%;
+}
+div#jumbo p {
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  margin: 0px auto;
+  padding-bottom: 128px;
+}
+div#jumbo b {
+  color: rgb(107, 206, 243);
+}
+
+div#sub-jumbo {
+  background: #efefef;
+  font-size: 28px;
+  color: #8f8f9f;
+  text-align: center;
+  padding: 15px 0px 15px;
 }
