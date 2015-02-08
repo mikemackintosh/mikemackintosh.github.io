@@ -3,7 +3,7 @@
 {% include head.html %}
   <body>
       <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
+        <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -14,12 +14,11 @@
 
             <a class="navbar-brand" href="/">
               <div class="main-logo"></div>
-              {{ site.title }}
             </a>
           </div>
 
           <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav pull-left">
               <li><a href="/" title="Home">Home</a></li>
               <li><a href="/archive" title="Archives">Archives</a></li>
               <li><a href="/resume" title="Resume">Resume</a></li>
