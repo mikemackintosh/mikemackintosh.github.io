@@ -360,3 +360,121 @@ div#sub-jumbo {
   text-align: center;
   padding: 15px 0px 15px;
 }
+
+@font-face {
+    font-family: 'socicon';
+    src: url('/public/fonts/socicon-webfont.eot');
+    src: url('/public/fonts/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/public/fonts/socicon-webfont.woff') format('woff'),
+         url('/public/fonts/socicon-webfont.ttf') format('truetype'),
+         url('/public/fonts/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: initial;
+}
+
+.socicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'socicon';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar-nav a .socicon{
+  font-size:24px;
+  color: rgb(107, 206, 243);
+}
+
+.navbar-nav a:hover .socicon{
+  font-size:24px;
+  color: rgb(255, 255, 255);
+}
+
+.socicon:empty{
+    width: 1em;
+}
+
+i.twitter:before { content: "a"; }
+i.facebook:before { content: "b"; }
+i.google:before { content: "c"; }
+i.pinterest:before { content: "d"; }
+i.foursquare:before { content: "e"; }
+i.yahoo:before { content: "f"; }
+i.skype:before { content: "g"; }
+i.yelp:before { content: "h"; }
+i.feedburner:before { content: "i"; }
+i.linkedin:before { content: "j"; }
+i.viadeo:before { content: "k"; }
+i.xing:before { content: "l"; }
+i.myspace:before { content: "m"; }
+i.soundcloud:before { content: "n"; }
+i.spotify:before { content: "o"; }
+i.grooveshark:before { content: "p"; }
+i.lastfm:before { content: "q"; }
+i.youtube:before { content: "r"; }
+i.vimeo:before { content: "s"; }
+i.dailymotion:before { content: "t"; }
+i.vine:before { content: "u"; }
+i.flickr:before { content: "v"; }
+i.500px:before { content: "w"; }
+i.instagram:before { content: "x"; }
+i.wordpress:before { content: "y"; }
+i.tumblr:before { content: "z"; }
+i.blogger:before { content: "A"; }
+i.technorati:before { content: "B"; }
+i.reddit:before { content: "C"; }
+i.dribbble:before { content: "D"; }
+i.stumbleupon:before { content: "E"; }
+i.digg:before { content: "F"; }
+i.envato:before { content: "G"; }
+i.behance:before { content: "H"; }
+i.delicious:before { content: "I"; }
+i.deviantart:before { content: "J"; }
+i.forrst:before { content: "K"; }
+i.playstore:before { content: "L"; }
+i.zerply:before { content: "M"; }
+i.wikipedia:before { content: "N"; }
+i.apple:before { content: "O"; }
+i.flattr:before { content: "P"; }
+i.github:before { content: "Q"; }
+i.chimein:before { content: "R"; }
+i.friendfeed:before { content: "S"; }
+i.newsvine:before { content: "T"; }
+i.identica:before { content: "U"; }
+i.bebo:before { content: "V"; }
+i.zynga:before { content: "W"; }
+i.steam:before { content: "X"; }
+i.xbox:before { content: "Y"; }
+i.windows:before { content: "Z"; }
+i.outlook:before { content: "1"; }
+i.coderwall:before { content: "2"; }
+i.tripadvisor:before { content: "3"; }
+i.appnet:before { content: "4"; }
+i.goodreads:before { content: "5"; }
+i.tripit:before { content: "6"; }
+i.lanyrd:before { content: "7"; }
+i.slideshare:before { content: "8"; }
+i.buffer:before { content: "9"; }
+i.rss:before { content: ","; }
+i.vkontakte:before { content: ";"; }
+i.disqus:before { content: ":"; }
+i.houzz:before { content: "+"; }
+i.mail:before { content: "@"; }
+i.patreon:before { content: "="; }
+i.paypal:before { content: "-"; }
+i.playstation:before { content: "^"; }
+i.smugmug:before { content: "¨"; }
+i.swarm:before { content: "$"; }
+i.triplej:before { content: "*"; }
+i.yammer:before { content: "&"; }
+i.stackoverflow:before { content: "("; }
+i.drupal:before { content: "#"; }
+i.odnoklassniki:before { content : ".";}
+i.android:before { content: "_"; }
+i.meetup:before { content: "]"; }
+i.persona:before { content: ")"; }
