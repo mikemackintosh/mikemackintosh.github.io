@@ -478,3 +478,11 @@ i.odnoklassniki:before { content : ".";}
 i.android:before { content: "_"; }
 i.meetup:before { content: "]"; }
 i.persona:before { content: ")"; }
+
+body {
+  /*background: rgb(22, 30, 39);
+}
+
+.container {
+  background: #fff;*/
+}
