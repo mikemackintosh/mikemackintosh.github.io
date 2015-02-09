@@ -7,29 +7,39 @@
 
   <!-- Some stupid SEO stuff -->
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-  <link rel=”author” href=”https://twitter.com/mikemackintosh“/>
-  <meta name=”twitter:card” content=”summary”>
-  
+  <link rel="author" href="https://twitter.com/mikemackintosh“/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@mikemackintosh">
+  <meta name="twitter:creator" content="@mikemackintosh">
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:site_name" content="Mike Mackintosh" />
+
+
+
   <!-- title stuff -->
   {% if page.title == "Home" %}
-  <meta name=”twitter:title” content=”{{ site.title }}”>  
+  <meta name="twitter:title" content="{{ site.title }}">  
+  <meta name="og:title" content="{{ site.title }}">  
   <title>{{ site.title }} &middot; {{ site.tagline }}</title>
   {% else %}
-  <meta name=”twitter:title” content=”{{ page.title }}”>  
+  <meta name="twitter:title" content="{{ page.title }}">  
+  <meta name=og:title" content="{{ page.title }}">  
   <title>{{ page.title }} &middot; {{ site.title }}</title>
   {% endif %}
-  
+
   <!-- Descripti0nz -->
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}">
+  {% if page.content %}
+  <meta name="description" content="{{ page.content | strip_html | truncatewords: 50 }}">
+  <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 50 }}">
+  <meta name="og:description" content="{{ page.content | strip_html | truncatewords: 50 }}">
   {% else %}
   <meta name="description" content="{{ site.tagline }}">
+  <meta name="twitter:description" content="{{ site.tagline }}">
+  <meta name="og:description" content="{{ site.tagline }}">
   {% endif %}
 
   <!-- CSS -->
-  <!--link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css"-->
-
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-precomposed.png">
   <link rel="icon" type="image/png" href="/favicon.png" />
