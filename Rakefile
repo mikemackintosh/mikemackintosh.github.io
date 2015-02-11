@@ -7,7 +7,7 @@ SOURCE = "."
 CONFIG = {
   'version' => "0.6.1",
   'layouts' => File.join(SOURCE, "_layouts"),
-  'posts' => File.join(SOURCE, "_posts"),
+  'posts' => File.join(SOURCE, "_drafts"),
   'post_ext' => "md",
 }
 

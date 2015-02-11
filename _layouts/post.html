@@ -15,9 +15,10 @@ layout: default
       {{ content }}
     </div>
 
+    <h3>Meta</h3>
     {% unless page.categories == empty %}
       <ul class="tag_box inline">
-        <li><i class="fa-folder"></i></li>
+        <li><i class="fa fa-folder"></i></li>
         {% assign categories_list = page.categories %}
         {% include categories_list.html %}
       </ul>

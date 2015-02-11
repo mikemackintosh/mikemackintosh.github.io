@@ -521,3 +521,7 @@ body {
     width: 234px;
   }
 }
+
+div.gist-file {
+  margin: 20px 0px 20px 0px !important;
+}
