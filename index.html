@@ -7,7 +7,7 @@ title: Home
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       <small>Posted on <strong>{{ post.date | date: "%B %e, %Y" }}</strong> in <a href="/categories/#{% if post.category %}{{ post.category }}{% else %}derp{% endif %}-ref">{% if post.category %}{{ post.category }}{% else %}derp{% endif %}</a>.</small>
       <p class="preview">{{ post.content | strip_html | truncatewords: 40 }}</p>
-      <a href="">Read More &raquo;</a>
+      <a href="{{ post.url }}">Read More &raquo;</a>
     </p>
     <hr />
 {% endfor %}
