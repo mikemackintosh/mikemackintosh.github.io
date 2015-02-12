@@ -23,4 +23,8 @@ For the post content, I used a Wordpress Markdown plugin for writing all my post
 
 To generate the filenames, the script will pull the publish date of the post, and convert it to a Jekyll timestamp (`YYYY-MM-DD`), and then create a slug from the title. When you also take into account we have the current post status (publish, draft, etc), we can easily drop the new Jekyll post into either `_posts` or `_drafts`. 
 
+One last thing to note is the permalinking. I wanted to make sure all of the `http://www.highonphp.com/links` directed to `http://www.mikemackintosh.com/links` without an issue. Wordpress included a permalink in the export which we can then toss into the Front-Matter of the Jekyll post, to keep the pages uniform. From the server side, I had to redirect the old domain to the new one, with the URI query string intact. You can easily do that with nginx:
+
+{% gist mikemackintosh/cbef8873fa3b25ed9028 nginx.conf %}
+
 Instead of installing a plugin in Wordpress, we get to convert the posts on our own terms.
