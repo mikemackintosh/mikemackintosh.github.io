@@ -10,7 +10,7 @@ extensions: [fenced_code_blocks]
 title:            Mike Mackintosh
 tagline:          and some of the really cool shit that i've done
 url:              http://www.mikemackintosh.com
-paginate:         1
+paginate:         20
 baseurl:          /
 author:
   name:           Mike Mackintosh

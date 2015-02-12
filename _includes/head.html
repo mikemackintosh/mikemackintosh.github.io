@@ -29,14 +29,14 @@
   {% endif %}
 
   <!-- Descripti0nz -->
-  {% if page.content %}
+  {% if page.title == "Home" %}
+  <meta name="description" content="Mike Mackintosh is a Security professional with several years experience, an avid blogger, and a family man.">
+  <meta name="twitter:description" content="Mike Mackintosh is a Security professional with several years experience, an avid blogger, and a family man.">
+  <meta name="og:description" content="Mike Mackintosh is a Security professional with several years experience, an avid blogger, and a family man.">
+  {% else %}
   <meta name="description" content="{{ page.content | strip_html | truncatewords: 50 }}">
   <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 50 }}">
   <meta name="og:description" content="{{ page.content | strip_html | truncatewords: 50 }}">
-  {% else %}
-  <meta name="description" content="{{ site.tagline }}">
-  <meta name="twitter:description" content="{{ site.tagline }}">
-  <meta name="og:description" content="{{ site.tagline }}">
   {% endif %}
 
   <!-- CSS -->
