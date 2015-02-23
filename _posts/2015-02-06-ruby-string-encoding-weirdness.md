@@ -3,6 +3,8 @@ layout: post
 title: Ruby String Encoding Weirdness
 tags: ruby utf-8 ascii-8bit string encoding
 category: web-apps
+redirects:
+- /2015/02/06/ruby-string-encoding-weirdness/
 ---
 
 I was investing some more time into rebuilding Cronus for TitanOSX. Within the communications from the titan client to Cronus, I have python make an HTTP call that adds a HTTP Header to it's requests. I was using this header to validate the user (think Bearer) within an ActiveRecord call, but it kept returning `nil`.
