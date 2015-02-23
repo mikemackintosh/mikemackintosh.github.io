@@ -480,7 +480,9 @@ i.meetup:before { content: "]"; }
 i.persona:before { content: ")"; }
 
 body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   /*background: rgb(22, 30, 39);
+
 }
 
 .container {
@@ -525,3 +527,8 @@ body {
 div.gist-file {
   margin: 20px 0px 20px 0px !important;
 }
+
+.content p img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;}

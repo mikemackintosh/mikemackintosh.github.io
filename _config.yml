@@ -5,6 +5,7 @@ production_url : http://www.mikemackintosh.com
 markdown: redcarpet
 highlighter: pygments
 extensions: [fenced_code_blocks]
+redirects: yes
 
 # Setup
 title:            Mike Mackintosh
