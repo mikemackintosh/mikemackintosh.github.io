@@ -3,6 +3,8 @@ layout: post
 title: Syntax Highlighting With Cat
 tags: config-management output cat source-code
 category: derp
+redirect_from:
+ - /2015/02/01/colored-cat-output/
 ---
 
 If you read a lot of source code or configuration files, and you're a loser that doesn't use `vim`, then these two commands will come in handy for you:
