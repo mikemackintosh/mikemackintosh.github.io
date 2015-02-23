@@ -4,6 +4,10 @@ permalink: /creating-responsive-shell
 title: "Creating a Responsive Shell "
 category: ["linux-system-administration", "mac-osx", "system-administration"]
 tags: bash cli fish responsive shell terminal tput tty zsh
+redirect_from:
+ - /creating-a-responsive-shell/
+ - /creating-a-responsive-shell/trackback/
+ - /creating-a-responsive-shell/feed/ 
 ---
 ## Responsive Shell, Oh My!
 

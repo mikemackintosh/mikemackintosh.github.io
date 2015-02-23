@@ -4,6 +4,10 @@ permalink: /dedicated-interface-routing-tables
 title: "Dedicated Routing Tables in Linux"
 category: ["fedora", "linux-system-administration", "network", "system-administration", "ubuntu-linux-system-administration"]
 tags: aptitude cli debian eth ethernet fabric interface interfaces ip network-2 networking optic reth routing switching ubuntu
+redirect_from:
+ - /dedicated-interface-routing-tables/
+ - /dedicated-interface-routing-tables/feed/
+ - /dedicated-interface-routing-tables/trackback/
 ---
 # Linux Routing
 
