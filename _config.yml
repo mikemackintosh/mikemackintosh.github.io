@@ -19,3 +19,6 @@ author:
   ghurl:          https://github.com/mikemackintosh
   email:          mike@rocketho.me
 ASSET_PATH: /public/
+
+gems:
+  - jekyll-redirect-from
