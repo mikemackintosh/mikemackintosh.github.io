@@ -481,12 +481,6 @@ i.persona:before { content: ")"; }
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /*background: rgb(22, 30, 39);
-
-}
-
-.container {
-  background: #fff;*/
 }
 
 .preview {
@@ -532,3 +526,11 @@ div.gist-file {
   display: block;
   margin-left: auto;
   margin-right: auto;}
+
+.container h2,h1,h3 {
+  margin-top: 48px !important;
+}
+
+.container p{
+  margin-bottom: 18px !important;
+}
