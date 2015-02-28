@@ -17,7 +17,7 @@ task :publish do
     if path.include?(ENV['ROCK_ARG1'])
       puts "Publishing: #{File.basename(path)}"
       %x[mv #{path} "./_posts/"]
-      %x[git add #{path} && git commit -m "publishing post #{File.basename(path)} && git push"]
+      %x[git add _posts/ && git commit -m "publishing post #{File.basename(path)}" && git push]
       exit!
     end
   end
