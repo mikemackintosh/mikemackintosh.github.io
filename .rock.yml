@@ -2,3 +2,4 @@ runtime: ruby21
 run: exec jekyll serve --watch --drafts
 post: exec rake post
 page: exec rake page
+publish: exec rake publish
