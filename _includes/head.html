@@ -8,15 +8,13 @@
 
   <!-- Some stupid SEO stuff -->
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-  <link rel="author" href="https://twitter.com/mikemackintosh“/>
+  <link rel="author" href="https://twitter.com/mikemackintosh"/>
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@mikemackintosh">
   <meta name="twitter:creator" content="@mikemackintosh">
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="Mike Mackintosh" />
-
-
 
   <!-- title stuff -->
   {% if page.title == "Home" %}
@@ -25,7 +23,7 @@
   <title>{{ site.title }} &middot; {{ site.tagline }}</title>
   {% else %}
   <meta name="twitter:title" content="{{ page.title }}">  
-  <meta name=og:title" content="{{ page.title }}">  
+  <meta name="og:title" content="{{ page.title }}">  
   <title>{{ page.title }} &middot; {{ site.title }}</title>
   {% endif %}
 
