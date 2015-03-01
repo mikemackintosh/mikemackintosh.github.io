@@ -554,6 +554,11 @@ h1 {
   padding-left: 14px;
 }
 
+h2 {
+  border-left: 5px solid #95ef00;
+  padding-left: 14px;
+}
+
 .front-page-post h3 {
   border-left: 5px solid rgb(107, 206, 243);
   padding-left: 10px;

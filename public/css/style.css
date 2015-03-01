@@ -73,20 +73,6 @@
 .gist .markdown-body {
   padding: 15px;
 }
-.gist pre {
-  padding: 0;
-  background-color: transparent;
-}
-.gist .gist-file .gist-data {
-  font-size: .8rem !important;
-  line-height: 1.4;
-}
-.gist code {
-  padding: 0;
-  color: inherit;
-  background-color: transparent;
-  border-radius: 0;
-}
 
 /* Quotes */
 blockquote {
