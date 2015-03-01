@@ -292,8 +292,7 @@ footer hr {
 
   .has-divider.page-header {
     margin-bottom: 4.25em;
-    padding-bottom: 2.875em;
-    padding-top: 1.125em; }
+    padding-bottom: 2.875em;}
 
   .has-divider.page-header:after {
     height: 0.625em; }
@@ -353,12 +352,26 @@ div#jumbo b {
   color: rgb(107, 206, 243);
 }
 
-div#sub-jumbo {
+div#sub-jumbo,.sub-jumbo {
   background: #efefef;
   font-size: 28px;
   color: #8f8f9f;
   text-align: center;
   padding: 15px 0px 15px;
+}
+
+.blue-jumbo {
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+  background: #3498db;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 48px 0px 48px;
+}
+
+.blue-jumbo a {
+  color: #fff;
+  text-decoration: none;
 }
 
 @font-face {
@@ -519,18 +532,42 @@ body {
 }
 
 div.gist-file {
-  margin: 20px 0px 20px 0px !important;
+  margin: 36px 0px 36px 0px !important;
 }
 
 .content p img{
   display: block;
   margin-left: auto;
-  margin-right: auto;}
-
-.container h2,h1,h3 {
-  margin-top: 48px !important;
+  margin-right: auto;
 }
 
-.container p{
-  margin-bottom: 18px !important;
+p, li{
+  line-height: 28px !important;
+}
+
+.page-header {
+  margin-top: 0px;
+}
+
+h1 {
+  border-left: 5px solid rgb(107, 206, 243);
+  padding-left: 14px;
+}
+
+.front-page-post h3 {
+  border-left: 5px solid rgb(107, 206, 243);
+  padding-left: 10px;
+}
+
+.front-page-post a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.front-page-post a:hover {
+  color: rgb(107, 206, 243);
+}
+
+.front-page-post .preview {
+  padding-left: 12px;
 }

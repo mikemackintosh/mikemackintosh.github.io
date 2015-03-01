@@ -8,42 +8,43 @@ tags: generate-ipv6-addresses generate-ipv6-addresses-ipv6 generate-ipv6-address
 # Background - IPv6
 A good systems/security/network administrator has a slew of tools up their sleeves to support their specialty. Unfortunately, many tools still do not support IPv6; those that do put a hurting on your wallet. The below was used to test connectivity across a router using [iptables](http://en.wikipedia.org/wiki/Iptables "iptables"), to make sure the IPv6 addresses were successfully blocked. 
 # The IPv6 Generator
-[php]<?php $startime = microtime(true);
 
-$prefix = "fe80:1234:";
-$octets = 6;
-$fin = pow($octets, 65536);
-echo "Resolving $fin IPv6 Addresses\n\n";
+    <?php $startime = microtime(true);
 
-for($i = 0; $i<= $fin;$i++){
-        $oct = dechex($i);
-        $addytmp = str_pad($oct, ($octets*3), "0", STR_PAD_LEFT);
-        $addytmp = str_split($addytmp, 4);
-        $addy = implode(":", $addytmp);
-        echo $prefix.$addy."\n";
-}
+    $prefix = "fe80:1234:";
+    $octets = 6;
+    $fin = pow($octets, 65536);
+    echo "Resolving $fin IPv6 Addresses\n\n";
 
-echo "It took ".(microtime(true)-$startime)." seconds";
-[/php]
+    for($i = 0; $i<= $fin;$i++){
+            $oct = dechex($i);
+            $addytmp = str_pad($oct, ($octets*3), "0", STR_PAD_LEFT);
+            $addytmp = str_split($addytmp, 4);
+            $addy = implode(":", $addytmp);
+            echo $prefix.$addy."\n";
+    }
 
-<h1>Other Uses You can even do something like the following to test IPv6 ranges for port scanning: [php]<?php $prefix = "fe80:1234:";
-$octets = 6;
-$fin = pow($octets, 65536);
+    echo "It took ".(microtime(true)-$startime)." seconds";
 
-for($i = 0; $i<= $fin;$i++){
-        $oct = dechex($i);
-        $addytmp = str_pad($oct, ($octets*3), "0", STR_PAD_LEFT);
-        $addytmp = str_split($addytmp, 4);
-        $addy = implode(":", $addytmp);
-        $fs = fsockopen($addy, 22);
-        if($fs){
-              echo $addy." has port 22 open\n"; 
-        }
+Other Uses You can even do something like the following to test IPv6 ranges for port scanning: 
 
-        fclose($fs);
-}
-[/php]
+    <?php $prefix = "fe80:1234:";
+    $octets = 6;
+    $fin = pow($octets, 65536);
+
+    for($i = 0; $i<= $fin;$i++){
+            $oct = dechex($i);
+            $addytmp = str_pad($oct, ($octets*3), "0", STR_PAD_LEFT);
+            $addytmp = str_split($addytmp, 4);
+            $addy = implode(":", $addytmp);
+            $fs = fsockopen($addy, 22);
+            if($fs){
+                  echo $addy." has port 22 open\n"; 
+            }
+
+            fclose($fs);
+    }
 
 How long does it take you to run the above?
 
-<b>Update: I will be updating this script shortly to support automatic detection of provided octets and adding a multiplier to speed it up.
+**Update:** I will be updating this script shortly to support automatic detection of provided octets and adding a multiplier to speed it up.

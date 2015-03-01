@@ -15,7 +15,7 @@ Yes. And there's nothing you can do about it. Many companies are not willing to 
 As a one-man security team, I know you have a heck of a lot of responsibilities, with very minimal resources to accomplish your goals. The biggest downfall to one-man security teams is the fact that you don't get to innovate; you're too busy fighting fires on a daily basis and cleaning up other peoples messes. As a result, and to allow you to focus your skillset correctly, you need to define your perimeter.
 
 
-# Establish a Perimeter
+# Establishing a Perimeter
 
 As a one-man security team, you need to shrink your responsibility as much as possible without sacrificing the integrity of the brand or company. This can simply be done by separating what a security engineer can do from should do. Failure to do so will result in burnout, lack of focus, and lack of motivation.
 
@@ -201,8 +201,8 @@ Use this to identify how many abusers you've identified, to graphing of blocked 
 ### Total Time to Patch (TTP)
 This one is huge. Every time an internet killing vulnerability appears, you can use this towards your advantage. Record the time that you are alerted on the vulnerability, to the time a patch is released, to the time you work with operations to schedule an upgrade, to the time patching has been completed. Use this to show management where communication or responsibilities needs to be corrected.
 
+
 # Summary
 
 I know, it can suck. You are in a position where it is difficult to have other teams take responsibility, every battle is uphill, and many of your bright ideas will get shot down thanks to lack of funding. But remember, you're now going to be immersed in a world of hackers, trackers, malware and botting. This is the best place to learn and grow, both professionally and technically, before moving on to your next adventure.
-
 
