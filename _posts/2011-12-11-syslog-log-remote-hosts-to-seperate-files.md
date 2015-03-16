@@ -2,7 +2,7 @@
 layout: post
 permalink: /syslog-log-remote-hosts-to-seperate-files
 title: "Syslog: Log Remote Hosts To Seperate Files"
-category: ["uncategorized"]
+category: system-administration
 tags: change-syslog-file change-syslog-output file-output-syslog new-syslog-file remote-sysklogd remote-syslog remote-syslog-file sysklogd syslog syslog-file syslog-file-out syslog-to-seperate-file syslogd ubuntu-syslog ubuntu-syslog-file
 ---
 # Background: Syslogging
@@ -32,9 +32,15 @@ On RPM Based Systems:
 
 # Step 2 - Configuring Sysklogd
 
-There are two configuration files for sysklogd. One is installed at `/etc/syslog.conf`. The other, the defaults file, is located at `/etc/default/syslogd`. Open these file in your favorite editor. First, we are going to edit `/etc/default/syslogd`. Edit the file to read as: [bash]SYSLOGD="-r"[/bash] Save. Next, let's open up the other file, `/etc/syslog.conf`. To add support for a remote host by IP, you can append the following to the end of the file: 
+There are two configuration files for sysklogd. One is installed at `/etc/syslog.conf`. The other, the defaults file, is located at `/etc/default/syslogd`. Open these file in your favorite editor. First, we are going to edit `/etc/default/syslogd`. 
 
-    +10.1.1.1 \*.\* /var/log/firewall.log
+Edit the file to read as: 
+
+    SYSLOGD="-r"
+
+Save. Next, let's open up the other file, `/etc/syslog.conf`. To add support for a remote host by IP, you can append the following to the end of the file: 
+
+    +10.1.1.1 *.* /var/log/firewall.log
 
 After you do, touch the file to create it. 
 
@@ -42,7 +48,7 @@ After you do, touch the file to create it.
 
 To listen by hostname, use the following syntax: 
 
-    +v3x.skynet.local.mikemackintosh.com \*.\* /var/log/appserver.log
+    +v3x.skynet.local.mikemackintosh.com *.* /var/log/appserver.log
 
 # Last Step
 

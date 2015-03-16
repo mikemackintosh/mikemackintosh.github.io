@@ -532,7 +532,12 @@ body {
 }
 
 div.gist-file {
-  margin: 36px 0px 36px 0px !important;
+  margin: 24px !important;
+  background-color: #fefeff !important;
+}
+
+.gist-data article {
+  background-color: #fefeff !important;
 }
 
 .content p img{
@@ -549,15 +554,10 @@ p, li{
   margin-top: 0px;
 }
 
-h1 {
+/*h1 {
   border-left: 5px solid rgb(107, 206, 243);
   padding-left: 14px;
-}
-
-h2 {
-  border-left: 5px solid #95ef00;
-  padding-left: 14px;
-}
+}*/
 
 .front-page-post h3 {
   border-left: 5px solid rgb(107, 206, 243);
