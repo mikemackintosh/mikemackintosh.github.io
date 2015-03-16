@@ -5,11 +5,11 @@ title: "Allowing Multiple Accounts with Same Email in WordPress"
 category: ["coding", "php-coding", "wordpress-coding"]
 tags: account email multiple-emails registration wordpress
 ---
-## Sharing Emails Across Multiple WordPress Accounts
+### Sharing Emails Across Multiple WordPress Accounts
 
 I was working on a project where a users would register their family to a modified WordPress instance, and fill out additional User Meta. Each family member would have their own user account, but not all the time did each family member have their own email. For this reason, I needed a way to register multiple accounts with the same email. I Googled, but all the results were the same, use a `pre_user_email` hook. The problem with this is, in 3.9, the `pre_user_email` hook was never fired on account registration.
 
-## What Should Work
+### What Should Work
 
 According to the documentation, the following should work out of the box:
 
@@ -29,7 +29,7 @@ According to the documentation, the following should work out of the box:
 
 But in Wordpress 3.9.1 it wasn't working. This function was never called on account registration, only on account import.
 
-## Get It Working
+### Get It Working
 
 I had to use the `registration_errors` hook to get it working. Here, I was able to unset the `email_exists` key from the `$errors` object and the account was added as expected.
 

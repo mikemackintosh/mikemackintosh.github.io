@@ -3,7 +3,7 @@ layout: post
 permalink: /autorun-for-php
 title: "Autorun for PHP - The PHP Developers Assistant"
 category: ["coding", "dev-tools", "php-coding"]
-tags: assistant autorun cli developer github php-2
+tags: assistant autorun cli developer github php
 ---
 ## Autorun for PHP
 

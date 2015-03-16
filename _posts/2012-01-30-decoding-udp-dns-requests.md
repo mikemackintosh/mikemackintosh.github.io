@@ -8,7 +8,7 @@ tags: decode-dns-request-packet decode-php decode-php-udp decode-udp dns iptable
 # Intro - Why Log DNS Requests
 A client presented a scenario where they wanted to be flagged when certain URL's were queried throughout the day, so they could black hole them for their home network. I put together the following workflow for them: [plain] Host -> [LAN] -> {FIREWALL} -> (Cloud) | | v Logging Gateway ($gateway) [/plain] We would duplicate all firewall traffic and redirect it to the logging gateway using iptables. The 'Gateway' would then listen on the port we wanted to capture traffic for, decode and log. See [the Packet Cloning Article](http://www.highonphp.com/packet-cloning-with-iptables "Packet Cloning") for more details on that. Sample code has been provided below.
 # The Code - Decoding DNS
-[php]<?php // Let's define some important variables!
+<?php // Let's define some important variables!
 $logfile = "/var/log/dns_logger";
 $gateway = "10.1.1.40";
 $date_format = "n/j/Y H:i:s";
