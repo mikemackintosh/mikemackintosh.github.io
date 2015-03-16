@@ -499,7 +499,6 @@ body {
 .preview {
   padding-top:8px;
   color: #7c7c7f;
-  font-family: 'Helvetica Neue';
 }
 
 .namecheap-banner-well {
@@ -547,7 +546,7 @@ div.gist-file {
 }
 
 p, li{
-  line-height: 28px !important;
+  line-height: 20px !important;
 }
 
 .page-header {
@@ -575,4 +574,31 @@ p, li{
 
 .front-page-post .preview {
   padding-left: 12px;
+  height: 90px !important;
+  font-size:12px !important;
+  display:block;
+  overflow: hidden;
+}
+
+.post-details {
+  font-size: 8.75px !important;
+}
+
+.post-details span {
+  margin-left:10px !important;
+}
+
+.post-details span.date a {
+    text-transform: uppercase;
+    color: rgb(108, 122, 137);
+}
+
+.post-details span.comments a {
+    text-transform: uppercase;
+    color: rgb(66, 139, 202);
+}
+
+.post-details span.permalink a {
+    text-transform: uppercase;
+    color: rgb(232, 51, 15);
 }
