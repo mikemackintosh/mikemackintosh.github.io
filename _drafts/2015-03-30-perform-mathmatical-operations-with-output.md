@@ -7,7 +7,7 @@ tags:
 
 
 ```shell
-echo " 1       0" | xargs
+echo "       0" | xargs
 ```
 
 ```shell

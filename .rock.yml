@@ -3,3 +3,42 @@ run: exec jekyll serve --watch --drafts
 post: exec rake post
 page: exec rake page
 publish: exec rake publish
+test: echo "No Tests, Bundle"
+bundle: |
+  git log > CHANGELOG
+
+  rm -rf .git
+
+  git init
+  git add .
+  git commit -F original.log
+
+  # Add the deploy remote
+  git remote add origin git@git.kn0x.net:deployer/mikemackintosh-blog.git -t master
+
+  # Setup Variables
+  BUILD_DATE=$(date +%Y%m%d%H%M%S)
+  CURRENT_TAG=$(git tag |tail -n 1 | xargs)
+  if [ "$CURRENT_TAG" -eq "" ] ; then
+    echo -e "\033[01;32mNo Existing Tags\033[00m"
+  else
+    CURRENT_TAG_HASH=$(git rev-list --tags $CURRENT_TAG | head -n 1)
+    CURRENT_HASH=$(git rev-parse HEAD)
+    if [ "$CURRENT_HASH" == "$CURRENT_TAG_HASH" ]; then
+      echo -e "\033[01;31mNew Version Has No Changes. Not Bundling\033[00m"
+      exit 1
+    fi
+  fi
+
+  # New Version is now date
+  NEW_VERSION=$BUILD_DATE
+
+  # Add build code to repo
+  git add --force .
+  git commit -m "Bundling code version ${NEW_VERSION} for deployment"
+
+  echo -e "\033[01;32mBuilding New version: \033[01;37m${NEW_VERSION}\033[00m"
+  git tag -a $NEW_VERSION -m "Build Date: ${BUILD_DATE}"
+  git push -r origin
+  git push --tags origin
+  echo -e "\033[01;32mPushing New Version: \033[01;37m${NEW_VERSION}\033[00m"
