@@ -2,7 +2,7 @@
 layout: post
 permalink: /adobe-dreamweaver-dark-color-scheme
 title: "Dark Dreamweaver Theme - Giah"
-category: ["design", "dev-tools", "dreamweaver-dev-tools", "php-coding"]
+category: Dreamweaver
 tags: alternative-dw-theme color-scheme-dark-for-dreamweaver cs cs4 cs5 cs5-5 dark-dreamweaver-color-scheme dark-dreamweaver-color-theme dark-dreamweaver-syntax-coloring dark-dreamweaver-theme dark-dw-theme dreamweaver-color-scheme dreamweaver-color-shemas dreamweaver-cs5-dark-theme dreamweaver-cs5-5-dark-color dreamweaver-cs5-5-dark-color-theme dreamweaver-dark dreamweaver-dark-syntax dreamweaver-dark-theme dreamweaver-schmes dreamweaver-syntax-coloring dreamweaver-theme dreamweaver-theming dreaweaver theme-dark theme-dw-dark
 ---
 # Dreamweaver Themes
@@ -20,8 +20,7 @@ On my iMac (SplugBox), I use one called [Terminal Dosis](http://www.impallari.co
 
 # Download You can download the files as follows:
 
-- [Windows Download: Dreamweaver Giah Theme](http://www.highonphp.com/v3?wp_ct=1)
-- [Mac Download: Dreamweaver Giah Theme](http://www.highonphp.com/v3?wp_ct=2)
+- [Dreamweaver Giah Theme](http://www.highonphp.com/download/Dreamweaver CS5.5 Giah Theme.zip)
 
 # Installation
 
