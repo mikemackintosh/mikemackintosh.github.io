@@ -5,5 +5,36 @@ page: exec rake page
 publish: exec rake publish
 test: echo "No Tests, Bundle"
 bundle: |
-  echo "test"
-  exit 1
+  # Build Time
+  UPSTREAM=git@git.kn0x.net:deployer/mikemackintosh-blog.git
+  BUILD_DATE=$(date +%Y%m%d%H%M%S)
+  REPONAME=$(basename `git rev-parse --show-toplevel`)
+
+  # Add the deploy remote
+  git remote add deployer $UPSTREAM -t master
+  git fetch deployer
+  git diff deployer/master > ~/$REPONAME-$BUILD_DATE.diff
+  git apply ~/$REPONAME-$BUILD_DATE.diff
+
+  # Setup Variables
+  CURRENT_TAG=$(git tag |tail -n 1 | xargs)
+  if [ "$CURRENT_TAG" -eq "" ] ; then
+    echo -e "\033[01;32mNo Existing Tags\033[00m"
+  else
+    CURRENT_TAG_HASH=$(git rev-list --tags $CURRENT_TAG | head -n 1)
+    CURRENT_HASH=$(git rev-parse HEAD)
+    if [ "$CURRENT_HASH" == "$CURRENT_TAG_HASH" ]; then
+      echo -e "\033[01;31mNew Version Has No Changes. Not Bundling\033[00m"
+      exit 1
+    fi
+  fi
+
+  # Add build code to repo
+  git add --force .
+  git commit -m "Bundling code version ${BUILD_DATE} for deployment"
+
+  echo -e "\033[01;32mBuilding New version: \033[01;37m${BUILD_DATE}\033[00m"
+  git tag -a $BUILD_DATE -m "Build Date: ${BUILD_DATE}"
+  git push -u deployer
+  git push --tags deployer
+  echo -e "\033[01;32mPushing New Version: \033[01;37m${BUILD_DATE}\033[00m"
