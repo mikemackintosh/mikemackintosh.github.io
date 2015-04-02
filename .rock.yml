@@ -8,6 +8,11 @@ page: exec rake page
 publish: exec rake publish
 test: echo "No Tests, Bundle"
 bundle: |
+  if [ -z $DEPLOY_SERVER ];
+    echo -e "\033[01;32mNothing Upstream To Bundle To\033[00m"
+    exit 1
+  fi
+
   # Build Time
   UPSTREAM=git@$DEPLOY_SERVER\:$DEPLOY_REPO.git
   BUILD_DATE=$(date +%Y%m%d%H%M%S)
