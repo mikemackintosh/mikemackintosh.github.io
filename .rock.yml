@@ -25,8 +25,8 @@ bundle: |
   git remote add deployer $UPSTREAM -t master
   git fetch deployer
   git diff deployer/master > ~/$REPONAME-$BUILD_DATE.diff
-  git pull deployer master
-  git apply --ignore-space-change --ignore-whitespace ~/$REPONAME-$BUILD_DATE.diff
+  git pull --rebase deployer master
+  #git apply --ignore-space-change --ignore-whitespace ~/$REPONAME-$BUILD_DATE.diff
 
   # Add build code to repo
   git add --force .
