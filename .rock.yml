@@ -1,3 +1,6 @@
+env:
+  DEPLOY_REPO: "deployer/mikemackintosh-blog"
+  DEPLOY_SERVER: "git.kn0x.net"
 runtime: ruby21
 run: exec jekyll serve --watch --drafts
 post: exec rake post
@@ -6,7 +9,7 @@ publish: exec rake publish
 test: echo "No Tests, Bundle"
 bundle: |
   # Build Time
-  UPSTREAM=git@git.kn0x.net:deployer/mikemackintosh-blog.git
+  UPSTREAM=git@$DEPLOY_SERVER:$APP.git
   BUILD_DATE=$(date +%Y%m%d%H%M%S)
   REPONAME=$(basename `git rev-parse --show-toplevel`)
 
@@ -14,7 +17,8 @@ bundle: |
   git remote add deployer $UPSTREAM -t master
   git fetch deployer
   git diff deployer/master > ~/$REPONAME-$BUILD_DATE.diff
-  git apply ~/$REPONAME-$BUILD_DATE.diff
+  git pull deployer/master
+  git apply --ignore-space-change --ignore-whitespace ~/$REPONAME-$BUILD_DATE.diff
 
   # Setup Variables
   CURRENT_TAG=$(git tag |tail -n 1 | xargs)
@@ -35,6 +39,9 @@ bundle: |
 
   echo -e "\033[01;32mBuilding New version: \033[01;37m${BUILD_DATE}\033[00m"
   git tag -a $BUILD_DATE -m "Build Date: ${BUILD_DATE}"
-  git push -u deployer
+  git push -f -u deployer HEAD
   git push --tags deployer
   echo -e "\033[01;32mPushing New Version: \033[01;37m${BUILD_DATE}\033[00m"
+
+  # Remove diff
+  rm ~/$REPONAME-$BUILD_DATE.diff
