@@ -14,7 +14,7 @@ bundle: |
   fi
 
   # Build Time
-  UPSTREAM=git@$DEPLOY_SERVER\:$DEPLOY_REPO.git
+  UPSTREAM=git@$DEPLOY_SERVER\:$DEPLOY_REPO\.git
   BUILD_DATE=$(date +%Y%m%d%H%M%S)
   REPONAME=$(basename `git rev-parse --show-toplevel`)
 
