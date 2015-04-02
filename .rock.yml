@@ -8,9 +8,9 @@ page: exec rake page
 publish: exec rake publish
 test: echo "No Tests, Bundle"
 bundle: |
-  if [ -z $DEPLOY_SERVER ];
+  if [ -z $DEPLOY_SERVER ]; then
     echo -e "\033[01;32mNothing Upstream To Bundle To\033[00m"
-    exit 1
+    exit 1;
   fi
 
   # Build Time
