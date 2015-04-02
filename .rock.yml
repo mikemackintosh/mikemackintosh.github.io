@@ -34,7 +34,7 @@ bundle: |
 
   echo -e "\033[01;32mBuilding New version: \033[01;37m${BUILD_DATE}\033[00m"
   git tag -a $BUILD_DATE -m "Build Date: ${BUILD_DATE}"
-  git push -f -u deployer
+  git push -f -u deployer HEAD:master
   git push --tags deployer
   echo -e "\033[01;32mPushing New Version: \033[01;37m${BUILD_DATE}\033[00m"
 
