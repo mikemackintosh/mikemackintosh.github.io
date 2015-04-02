@@ -23,8 +23,8 @@ bundle: |
 
   # Add the deploy remote
   git remote add deployer $UPSTREAM -t master
-  git fetch deployer
-  git diff deployer/master > ~/$REPONAME-$BUILD_DATE.diff
+  #git fetch deployer
+  #git diff deployer/master > ~/$REPONAME-$BUILD_DATE.diff
   git pull --rebase deployer master
   #git apply --ignore-space-change --ignore-whitespace ~/$REPONAME-$BUILD_DATE.diff
 
