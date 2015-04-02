@@ -509,14 +509,14 @@ body {
 }
 
 .namecheap-banner {
-  background: url('http://files.namecheap.com/graphics/linkus/728x90-1.gif') center center;
+  background: url('https://files.namecheap.com/graphics/linkus/728x90-1.gif') center center;
   height: 90px;
   width: 728px;
 }
 
 @media(max-width:767px){
   .namecheap-banner {
-    background: url('http://files.namecheap.com/graphics/linkus/468x60-7.gif') center center;
+    background: url('https://files.namecheap.com/graphics/linkus/468x60-7.gif') center center;
     height: 60px;
     width: 468px;
   }
@@ -524,7 +524,29 @@ body {
 
 @media(max-width:480px){
   .namecheap-banner {
-    background: url('http://files.namecheap.com/graphics/linkus/234x60-1.gif') center center no-repeat;
+    background: url('https://files.namecheap.com/graphics/linkus/234x60-1.gif') center center no-repeat;
+    height: 60px;
+    width: 234px;
+  }
+}
+
+.digitalocean-banner {
+  background: url('https://files.namecheap.com/graphics/linkus/728x90-1.gif') center center;
+  height: 90px;
+  width: 728px;
+}
+
+@media(max-width:767px){
+  .digitalocean-banner {
+    background: url('https://files.namecheap.com/graphics/linkus/468x60-7.gif') center center;
+    height: 60px;
+    width: 468px;
+  }
+}
+
+@media(max-width:480px){
+  .digitalocean-banner {
+    background: url('https://files.namecheap.com/graphics/linkus/234x60-1.gif') center center no-repeat;
     height: 60px;
     width: 234px;
   }
