@@ -6,6 +6,7 @@ markdown: redcarpet
 highlighter: pygments
 extensions: [fenced_code_blocks]
 redirects: yes
+exclude: [vendor]
 
 # Setup
 title:            Mike Mackintosh
