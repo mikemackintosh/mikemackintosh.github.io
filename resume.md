@@ -4,7 +4,7 @@ title : "Resume"
 header : "Mike Mackintosh"
 group: navigation
 redirect_from:
- - /resume/
+ - /resume.html
 ---
 
 # Mike Mackintosh
