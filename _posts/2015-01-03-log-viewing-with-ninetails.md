@@ -7,15 +7,13 @@ redirect_from:
  - /system-administration/2015/01/03/log-viewing-with-ninetails/
 ---
 
-![ninetails](https://www.dropbox.com/s/fwi2oplluoxbblu/Screenshot%202014-07-26%2014.24.38.png?dl=1)
-
 ### Introduction
 Ninetails is a simple python tool for viewing logs in a very efficient (and colorful) manner. Anyone familiar with intrusion detection, system troubleshooting, or even ops engineers investigating outages, it's important to be able to spot a log anomaly quickly. 
 
 ## I Choose You, Ninetails
 Take a look:
 
-![Screenshot](https://www.dropbox.com/s/0c3ze12ovjpttnp/Screenshot%202014-10-27%2010.11.49.png?dl=1)
+![Screenshot](https://github.com/mikemackintosh/ninetails/blob/master/screenshot.png)
 
 Creating your own colors is as simple as creating a python dictionary. The syntax is as follows:
 
