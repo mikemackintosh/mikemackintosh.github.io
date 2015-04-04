@@ -6,10 +6,10 @@ tags:
 ---
 
 
-```shell
+```
 echo "       0" | xargs
 ```
 
-```shell
+```
 echo $(( $VARIABLE / 100 ))
 ```

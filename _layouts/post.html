@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
 </div>
@@ -15,25 +14,23 @@ layout: default
       {{ content }}
     </div>
 
-    <h3>Meta</h3>
-    {% unless page.categories == empty %}
-      <ul class="tag_box inline">
-        <li><i class="fa fa-folder"></i></li>
-        {% assign categories_list = page.categories %}
-        {% include categories_list.html %}
-      </ul>
-    {% endunless %}
-
     {% unless page.tags == empty %}
-      <ul class="tag_box inline">
-        <li><i class="fa fa-tags"></i></li>
+      <span class="tag_box">
+      Tagged under  
         {% assign tags_list = page.tags %}
-        {% include tags_list.html %}
-      </ul>
+        {% include tags_list.html %} and others
+      </span>
     {% endunless %}
 
     <hr>
     
+    <div class="row author-info" align="center"> 
+      <img src="//www.gravatar.com/avatar/6fd501f97291bd8015362d6d0ce59bfd.png" class="img-circle" alt="Mike Mackintosh">
+      <p>
+        This post was written by Mike Mackintosh, a decorated security professional. 
+      </p>
+    </div>    
+
     <div class="row" align="center"> 
       <ul class="pagination">
         {% if page.previous %}
@@ -50,13 +47,23 @@ layout: default
       </ul>
     </div>
     <hr>
+
+        <div class="banner-well" align="center">
+          <a href="https://www.digitalocean.com/?refcode=0cbacc4d1d87">
+            <div class="digitalocean-banner"></div>
+          </a>
+        </div>
+
+    <hr>
 {% include comments.html %}
   </div>
 </div>
+ 
+<hr />
 
 {% if site.related_posts %}
-<aside class="related">
-  <h2>Related Posts</h2>
+<div class="row" align="center">
+  <h3>Related Posts</h3>
   <ul class="related-posts">
     {% for post in site.related_posts limit:5 %}
       <li>
@@ -67,6 +74,6 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-</aside>
+</div>
 {% endif %}
 

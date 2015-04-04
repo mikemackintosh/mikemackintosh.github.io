@@ -2,25 +2,29 @@
 layout: home
 title: Home
 ---
-  <div class="row">
-  <br />
+  <ul class="feed">
 {% for post in paginator.posts %}
-    <div class="col-lg-4 col-md-6 col-sm-12 front-block">
-      <div class="thumbnail">
-        <div class="caption">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <div class="row post-details">
-            <span class="date"><i class="fa-clock fa"></i> {{ post.date | date: "%B %e, %Y" }}</span>
-            <span class="comments"><i class="fa-comments-o fa"></i> <a href="{{ post.url }}#disqus_thread">Comments</a></span>
-            <span class="permalink"><a href="{{ post.url }}">Permalink</a></span>
+    <li class="posts">
+      <div class="feedable-details">
+        <h3>
+          <a href="{{ post.url }}"><b>{{ post.category }}:</b> {{ post.title }}</a>
+        </h3>
+
+        <div class="meta">
+          <span class="author">by Mike Mackintosh</span>
+          <div class="comments">
+            <i class="fa fa-comment"></i>
+            <a href="{{ post.url }}#disqus_thread"></a>
           </div>
-          <p class="preview">{{ post.content | strip_html | truncatewords: 30 }}</p>
-          <p><a href="{{ post.url }}" class="btn btn-primary btn-md">Read More</a></p>
+          <div class="permalink">
+            <a href="{{ post.url }}"><i class="fa fa-link"></i> Permalink</a>
+          </div>
         </div>
+        <span class="date pull-right" title="{{ post.date }}">{{ post.date | timeago }}</span>
       </div>
-    </div>
+    </li>
 {% endfor %}
-  </div>
+  </ul>
 
 {% if paginator.total_pages > 1 %}
 <div class="row" align="center"> 

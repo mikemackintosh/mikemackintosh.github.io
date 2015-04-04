@@ -29,42 +29,38 @@
   font-weight: bold; }
 
 /* tag_box */
-.tag_box {
+.tag_box, .author-info {
+
   list-style: none;
   margin: 0;
-  overflow: hidden; }
-
-.tag_box li {
+  color: #999;
+  overflow: hidden;
+  font-size: 12px;
   line-height: 28px; }
 
-.tag_box li i {
-  opacity: 0.9; }
-
-.tag_box.inline li {
-  float: left; }
+.author-info img {
+  margin-bottom: 8px;
+}
 
 .tag_box a {
-  padding: 3px 6px;
-  margin: 2px;
-  background: rgb(107, 206, 243);
-  color: #fff;
-  border-radius: 3px;
-  text-decoration: none;
-  border: 1px solid rgb(67, 166, 203); }
+  font-size: 12px;
+  color: #999;
+}
+
+.related-posts a {
+  font-size: 14px;
+  line-height: 28px;
+  color: #999;
+}
 
 .tag_box a span {
   vertical-align: super;
   font-size: 0.8em; }
 
-.tag_box a:hover {
-  color: #fff;
-  background-color: #95ef00;
-  border: 1px solid #6dc700; }
-
-.tag_box a.active {
-  background: #57A957;
-  border: 1px solid #4c964d;
-  color: #FFF; }
+.tag_box a:hover, .related-posts a:hover {
+  color: rgb(107, 206, 243);
+  text-decoration: none;
+}
 
   /* Gist via GitHub Pages */
 .gist .gist-file {

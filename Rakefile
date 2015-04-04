@@ -51,7 +51,11 @@ task :post do
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts "category: derp"
     post.puts "tags: #{tags}"
-    post.puts "---"
+    post.puts "---\n\n"
+    post.puts "### Introduction\n\n"
+    post.puts "## Section Title\n\n"
+    post.puts "## Section Title\n\n"
+    post.puts "## Conclusion\n"
   end
 end # task :post
 

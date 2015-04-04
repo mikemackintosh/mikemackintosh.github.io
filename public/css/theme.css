@@ -287,12 +287,18 @@ footer hr {
     padding-top: 0.9375em; }
 
   .page-header {
-    margin-bottom: 0.5em;
-    padding: 0.5em 1.25em 1.25em; }
+    letter-spacing: normal;
+    line-height: 48px;
+    margin-bottom: 10px;
+    padding: 0.5em 1.25em 0 0; 
+  }
+
+  .page-header h1 {
+    font-size:40px;
+  }
 
   .has-divider.page-header {
-    margin-bottom: 4.25em;
-    padding-bottom: 2.875em;}
+    margin-bottom: 4.25em;}
 
   .has-divider.page-header:after {
     height: 0.625em; }
@@ -333,7 +339,7 @@ div.main-logo {
 }
 
 div#jumbo {
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald', 'Lato', Helvetica, Arial, sans-serif;
   background:url('/public/logo.png')  rgb(22, 30, 39) center 72px no-repeat !important;
   color: #fff;
   margin-top: -20px;
@@ -361,7 +367,7 @@ div#sub-jumbo,.sub-jumbo {
 }
 
 .blue-jumbo {
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+  font-family: 'Oswald', 'Lato', Helvetica, Arial, sans-serif;  
   background: #3498db;
   font-size: 20px;
   color: #fff;
@@ -493,7 +499,7 @@ i.meetup:before { content: "]"; }
 i.persona:before { content: ")"; }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
 .preview {
@@ -501,7 +507,7 @@ body {
   color: #7c7c7f;
 }
 
-.namecheap-banner-well {
+.banner-well {
   /*background: #efefef;  */
   padding: 15px 0px 15px;
   margin: 0px auto;
@@ -531,14 +537,14 @@ body {
 }
 
 .digitalocean-banner {
-  background: url('/images/do/ssd-virtual-servers-banner-2-728x90.jpg') center center;
+  background: url('/public/images/do/ssd-virtual-servers-banner-2-728x90.jpg') center center;
   height: 90px;
   width: 728px;
 }
 
 @media(max-width:767px){
   .digitalocean-banner {
-    background: url('/images/do/ssd-virtual-servers-banner-468x60.jpg') center center;
+    background: url('/public/images/do/ssd-virtual-servers-banner-468x60.jpg') center center;
     height: 60px;
     width: 468px;
   }
@@ -546,7 +552,7 @@ body {
 
 @media(max-width:480px){
   .digitalocean-banner {
-    background: url('/images/do/ssd-virtual-servers-banner-320x50.jpg') center center no-repeat;
+    background: url('/public/images/do/ssd-virtual-servers-banner-320x50.jpg') center center no-repeat;
     height: 50px;
     width: 320px;
   }
@@ -567,60 +573,129 @@ div.gist-file {
   margin-right: auto;
 }
 
-p, li{
-  line-height: 20px !important;
-}
-
 .page-header {
   margin-top: 0px;
 }
 
-/*h1 {
-  border-left: 5px solid rgb(107, 206, 243);
-  padding-left: 14px;
-}*/
-
-/*.front-page-post h3 {
-  border-left: 5px solid rgb(107, 206, 243);
-  padding-left: 10px;
-}*/
-
-.front-page-post a {
-  text-decoration: none;
-  color: #3498db;
+h2 {
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: light;
+  letter-spacing: 0.200000002980232px;
 }
 
-.front-page-post a:hover {
+ul.feed {
+  padding-right: 40px;
+}
+
+ul.feed li.posts {
+  border-bottom-color: rgb(232, 232, 232);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  box-sizing: border-box;
+  display: list-item;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22.3999996185303px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 18px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 20px;
+  position: relative;
+  text-align: left;
+}
+
+ul.feed li.posts .feedable-details {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  color: rgb(162, 162, 162);
+  font-size: 14px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  width: 100%;
+  text-align: left;
+}
+ul.feed li.posts .feedable-details h3 a{
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  color: #131313;
+}
+ul.feed li.posts .feedable-details h3 a:hover{
+  text-decoration: none;
   color: rgb(107, 206, 243);
 }
-
-.front-page-post .preview {
-  padding-left: 12px;
-  height: 90px !important;
-  font-size:12px !important;
-  display:block;
-  overflow: hidden;
+ul.feed li.posts .feedable-details .meta {
+  display: inline-block;
 }
 
-.post-details {
-  font-size: 8.75px !important;
+.meta .permalink a{
+  font-family: 'Lato', sans-serif;  
+  color: #e8330f;
+  font-size: 10px;
+}
+.meta .permalink a:hover{
+  font-weight: bold;
+  text-decoration: none;
+}
+.meta .permalink .fa {
+  color: #e8330f;
+  font-size: 8px;
 }
 
-.post-details span {
-  margin-left:10px !important;
+.meta .comments a{
+  font-family: 'Lato', sans-serif;  
+  color: rgb(107, 206, 243);
+  font-size: 10px;
+}
+.meta .comments a:hover{
+  font-weight: bold;
+  text-decoration: none;  
+}
+.meta .comments .fa {
+  color: rgb(107, 206, 243);
+  font-size: 8px;
 }
 
-.post-details span.date a {
-    text-transform: uppercase;
-    color: rgb(108, 122, 137);
+.meta *{
+  display: inline;
 }
 
-.post-details span.comments a {
-    text-transform: uppercase;
-    color: rgb(66, 139, 202);
+.meta .date {
+  font-weight: lighter;
+  top: -15px;
 }
 
-.post-details span.permalink a {
-    text-transform: uppercase;
-    color: rgb(232, 51, 15);
+.content p, .content ul {
+  font-size: sans-serif;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 22px;
+}
+
+#info-bar { 
+  background: white;
+  border-bottom: 1px solid #efefef;
+}
+
+.container { 
+  width: auto;
+  max-width: 760px;
+  text-align: left !important;
+}
+
+ul.related-posts {
+  list-style-type: none;
 }
