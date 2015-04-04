@@ -23,10 +23,7 @@ bundle: |
 
   # Add the deploy remote
   git remote add deployer $UPSTREAM -t master
-  #git fetch deployer
-  #git diff deployer/master > ~/$REPONAME-$BUILD_DATE.diff
   git pull --rebase deployer master
-  #git apply --ignore-space-change --ignore-whitespace ~/$REPONAME-$BUILD_DATE.diff
 
   # Add build code to repo
   git add --force .
@@ -37,6 +34,3 @@ bundle: |
   git push -f -u deployer HEAD:master
   git push --tags deployer
   echo -e "\033[01;32mPushing New Version: \033[01;37m${BUILD_DATE}\033[00m"
-
-  # Remove diff
-  rm ~/$REPONAME-$BUILD_DATE.diff
