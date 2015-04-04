@@ -2,7 +2,7 @@
 layout: post
 permalink: /quickest-way-query-mac-serial-numbers
 title: "Quickest Way To Query Mac Serial Numbers"
-category:"How To"
+category: "How To"
 tags: ioplatformserialnumber ioreg mac mac-get-serial-number-command-line mac-get-serial-number-terminal optimization performance serial-number system_profiler titan
 ---
 ### Introduction
