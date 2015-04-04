@@ -1,15 +1,20 @@
 ---
 layout: post
-title: Hello Scarecrow, A RESTful Interface For Spamhaus Feeds
+title: Scarecrow - A RESTful Interface For Spamhaus Feeds
 tags: dns spamhaus brute-force dictionary-attack spam rest ruby
-category: web-apps
+category: "Project"
+redirect_from:
+ - /web-apps/2015/01/14/scarecrow-a-restful-interface-for-spamhaus-feeds/
 ---
+
+### Introduction
 
 Scarecrow is the easiest way to consume the Spamhaus feeds which is traditionally powered by DNS. Although effective in SMTP services, I've found much benefit in using it to protect web apps from malicious and fraudulent behavior. Although it's simple to query DNS is most common web languages, it comes with headaches, buffer and cache issues, as well as control of which servers you actually hit.
 
 Scarecrow allows you to submit a GET request with the route being your IP (or malware domain) in question, and you receive back a message, a code, and an array of results. This response is JSON encoded and can be easily decoded into an array, hash or object.
 
 See this project on [Github: mikemackintosh/spamhaus-scarecrow](https://github.com/mikemackintosh/spamhaus-scarecrow).
+
 
 ## Usage
 
@@ -39,7 +44,7 @@ You can easily consume scarecrow with a HTTP GET request:
 
 {% gist mikemackintosh/14d2ddbbe94d66926e1f example.rb%}
 
-### Responses
+## Responses
 
 A response of `-1` or `0` means that there is no malicious match.
 

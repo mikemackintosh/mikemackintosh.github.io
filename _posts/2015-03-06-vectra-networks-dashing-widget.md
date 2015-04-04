@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Vectra Networks Dashing Widget"
-category: security
+category: "Network Security"
 tags: vectra network api ruby dashing
+redirect_from:
+ - /security/2015/03/06/vectra-networks-dashing-widget/
 ---
 
 For those who know me, know I've been working with a new vendor, Vectra Networks. These guys have one of the most solid and responsive systems I've seen yet when it comes to malware mapping and threat networking and detection.

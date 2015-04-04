@@ -1,5 +1,5 @@
 # Permalinks
-permalink: /:title.html
+permalink: /:title
 production_url : https://www.mikemackintosh.com
 #relative_permalinks: true
 markdown: redcarpet

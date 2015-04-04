@@ -2,9 +2,10 @@
 layout: post
 title: "Running A One-Man Security Team"
 description: ""
-category: security
+category: Security
 tags: security limited-resources informational netsec infosec syssec buttsec appsec
-csstag: blah
+redirect_from:
+ - /security/2015/02/28/one-man-security-teams/
 ---
 
 

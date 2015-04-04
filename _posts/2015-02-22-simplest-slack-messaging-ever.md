@@ -1,17 +1,19 @@
 ---
 layout: post
-title: Slackdraft - The Simplest Way To Integrate
-category: integrations
+title: Sending Messages to Slack with Slackdraft
+category: Ruby
 tags: slackdraft slack slackhq irc messaging integrations httparty ruby
+redirect_from:
+ - /integrations/2015/02/22/simplest-slack-messaging-ever/
 ---
 
-# What Is Slack?
+### Introduction
 
 Slack is the finest messaging and chat platform to find itself entangled in the world wide web since the dot com boom. If you don't know what I'm talking about, then you're a n00b. Check them out at [www.slack.com](https://slack.com/).
 
 ![SlackUI](https://www.dropbox.com/s/1veqca2kr0ez8a4/Screenshot%202015-02-22%2022.05.59.png?dl=1)
 
-# Installation
+## Installation
 
 Like any other gem:
 
@@ -19,7 +21,7 @@ Like any other gem:
 gem install slackdraft
 ```
 
-# Features
+## Features
 
 I created the gem to allow for really simple integration into Slack. Some of the features include:
 
@@ -30,7 +32,7 @@ I created the gem to allow for really simple integration into Slack. Some of the
 
 See examples of pre-formated alerts in the [examples/formatted/](https://github.com/mikemackintosh/slackdraft/tree/master/examples/formatted).
 
-# Ruby Usage
+## Ruby Usage
 
 Usage is very simple:
 
@@ -61,7 +63,7 @@ slack.send!
 
 For more examples, see the `examples/` directory.
 
-# Command-line Usage
+## Command-line Usage
 
 It's dumb simple. Instead of using `curl`, use this:
 
@@ -74,7 +76,7 @@ slackdraft -u mike \
 
 > **Note**: The CLI version does not support Slack Attachments
 
-## Help text
+### Help text
 
 ```
 $ slackdraft -h

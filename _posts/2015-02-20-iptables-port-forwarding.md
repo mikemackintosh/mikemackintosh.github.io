@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Simple Port Forwarding with IPTables"
-category: system-administration
+category: "How To"
 tags: iptables port-forward git ssh
+redirect_from:
+ - /system-administration/2015/02/20/iptables-port-forwarding/
 ---
 
 # Background

@@ -1,9 +1,13 @@
 ---
 layout: post
 title: Building a Security Team in 2015
-category: security
+category: Security
 tags: 2015-security trends management
+redirect_from:
+ - /security/2015/01/01/building-a-security-team-in-2015/
 ---
+
+### Introduction
 > It is late, and I'm tired, but wanted to jot this down before I fell asleep. Revisions and corrections to follow.
 
 In my professional experience, compliance is not security. So, clearly, being compliant is not being secure. There are aspects of compliance which increase security, but they are more in the realm of operations and work flows (think PCI and SOX). What is being secure, is understanding what's happening on your network, within your apps or on your servers, and mission critical files being accessed. Visibility is not everything, yet it is everything at the same time. Without having visibility, you don't know what to secure. You don't know what's being targeted, and you sure as hell don't know what's already been pwned. Visibility also means expressing your impact to executive teams and stakeholders.
@@ -12,7 +16,7 @@ In 2014, we saw several large projects riddled with vulnerabilities, exploits fl
 
 In 2015, we will likely see the same thing, but to pro-actively defend against it, we need a new approach to security.
 
-### The Old Model (?)
+## The Old Model (?)
 
 Security used to easily be defined as:
 
@@ -22,7 +26,7 @@ Security used to easily be defined as:
 
 This worked great for the most part. It defined responsibilities to specific security teams. But the problem with this is there is no clear involvement to preventing these problems, or even detecting them.
 
-### The New Model (HSF/ Hackintosh Security Framework)
+## The New Model (HSF/ Hackintosh Security Framework)
 
 The new security model I will be implementing follows the following general idea: Justify headcount and prove justification.
 
@@ -68,7 +72,7 @@ Security Engineering, or SecEng, (yes, sounds like sucking), works closely with 
 
   - This team is responsible for assessing impact of an event and the fallout which may occur. If the attack was against some specific piece of code on the production network, they reverse engineer it to learn and evolve. They work closely with legal and send off 'your password sucked and you got pwned, not our fault' emails to customers if needed.
 
-### In Conclusion
+## In Conclusion
 
 2015 is going to be interesting as hell. Yesteryear left us with a whole lot of lessons to learn from. If your company wants to stay out of the news, you need to learn and adapt to the ever changing world of security. 
 
