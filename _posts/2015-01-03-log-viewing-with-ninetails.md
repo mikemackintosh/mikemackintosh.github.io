@@ -13,7 +13,7 @@ Ninetails is a simple python tool for viewing logs in a very efficient (and colo
 ## I Choose You, Ninetails
 Take a look:
 
-![Screenshot](https://github.com/mikemackintosh/ninetails/blob/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/mikemackintosh/ninetails/master/screenshot.png)
 
 Creating your own colors is as simple as creating a python dictionary. The syntax is as follows:
 
