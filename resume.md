@@ -3,6 +3,8 @@ layout: page
 title : "Resume"
 header : "Mike Mackintosh"
 group: navigation
+redirect_from:
+ - /resume
 ---
 
 # Mike Mackintosh
