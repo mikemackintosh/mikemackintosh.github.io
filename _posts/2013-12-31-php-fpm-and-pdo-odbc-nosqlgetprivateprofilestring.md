@@ -2,14 +2,14 @@
 layout: post
 permalink: /php-fpm-pdo-odbc-nosqlgetprivateprofilestring
 title: "PHP, FPM and PDO ODBC NoSQLGetPrivateProfileString"
-category: ["uncategorized"]
-tags: 
+category: "PHP"
+tags: php odbc vertica pdo
 ---
-### ODBC, OH My!
+### Introduction
 
 I was working on a project which used `Vertica`, a columnar-based RDBM, which is a pain in the butt to work with on as a sysadmin.
 
-### The Error
+## The Error
 
 The following error was displayed when executing a script from nginx/php-fpm. The same script ran fine from the CLI.
 

@@ -2,14 +2,14 @@
 layout: post
 permalink: /autorun-for-php
 title: "Autorun for PHP - The PHP Developers Assistant"
-category: ["coding", "dev-tools", "php-coding"]
-tags: assistant autorun cli developer github php
+category: "Project"
+tags: assistant autorun cli developer github php python
 ---
-### Autorun for PHP
+### Introduction
 
 Here is a quick `python` script that listens for file modifications recursively. If a file change is found, the file you specified will execute. The purpose was to alleviate the headache of programming PHP and having to switch contexts between a terminal and your editor to execute your code.
 
-### Usage:
+## Usage:
 
 Here are some quick steps to use Autorun. You must have `git` installed and a `python` runtime.
 
@@ -27,7 +27,7 @@ If you omit `<path>` then it will use your current directory (`.`). Otherwise, i
 
     ./autorun <file> <path>
 
-#### Example:
+## Example:
 
     $ ./autorun app.php
     Preparing to run: app.php
@@ -46,6 +46,8 @@ If you omit `<path>` then it will use your current directory (`.`). Otherwise, i
     Execution Completed
     Received a response of: 0
     Took 0.0019392827 seconds
+
+## Conclusion
 
 You can file the whole package on [GitHub](https://github.com/mikemackintosh/autorun).
 

@@ -1,9 +1,9 @@
 ---
 layout: post
 permalink: /one-liner-using-non-antialiased-fonts-sublime-text
-title: "One-Liner: Using Non Antialiased Fonts In Sublime Text "
-category: ["uncategorized"]
-tags: 
+title: "Using Non Antialiased Fonts In Sublime Text "
+category: "One-Liner"
+tags: sublime sublime-text ide editor
 ---
 ## Sublime Text Antialiasing
 

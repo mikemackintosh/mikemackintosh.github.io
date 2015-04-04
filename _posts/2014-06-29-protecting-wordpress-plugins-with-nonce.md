@@ -2,10 +2,11 @@
 layout: post
 permalink: /protecting-wordpress-plugins-nonce
 title: "Protecting Wordpress Plugins with nonce"
-category: ["cross-site-request-forgery", "php-coding", "security", "wordpress-coding"]
-tags: csrf nonce security wordpress
+category: "How To"
+tags: csrf nonce security wordpress php
 ---
-### Cross Site Request Forgeries
+
+## Introduction
 
 A [Cross-Site Request Forgery](http://en.wikipedia.org/wiki/Cross-site_request_forgery) is a type of malicious activity that can occur while surfing the web. It uses a user trusted website/domain to trick the user into clicking a link or supplying data which could be used to formulate a URL that executes some kind of action. If you take a look at the [OWASP](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)) ( [Open Web Application Security Project](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))) page for CSRF's they give some good examples as to some of the ways they exist.
 

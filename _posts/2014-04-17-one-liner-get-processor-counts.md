@@ -1,21 +1,23 @@
 ---
 layout: post
 permalink: /one-liner-get-processor-counts
-title: "One-Liner: Get Processor Counts"
-category: ["linux-system-administration", "services", "system-administration"]
+title: "Get System Processor Counts"
+category: "One Liner"
 tags: config-management configurations cpu nginx processor-count
 ---
-# Processor Counts
+### Introduction
 
 When you're writing configurations for services like PHP-FPM or nginx, you need to know how many processes are available. One example is the `worker_processes` setting in `nginx.conf`. As you may not be deploying your configuration on similar hardware, it can become cumbersome to manually grab this information for each server. This can be even more of a headache if you manage your configs with Chef or Puppet.
 
-# The Command
+## Querying This Information
 
 Most distributions of Linux will have a `/proc/cpuinfo` file which contains details on the available setup. Well, we can take this output and grep for processor, as every core available will be listed in the output, and then we grab a line count of the results from `grep`:
 
     cat /proc/cpuinfo |grep processor | wc -l
 
 You can wrap this with `$()` to toss the result into a Bash variable for use in other scripts.
+
+## Example Response
 
 Output of `/proc/cpuinfo` for those curious:
 

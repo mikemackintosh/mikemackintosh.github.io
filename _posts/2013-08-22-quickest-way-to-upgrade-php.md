@@ -2,10 +2,10 @@
 layout: post
 permalink: /upgrading-php
 title: "Quickest Way To Upgrade PHP"
-category: ["linux-system-administration", "php-coding", "system-administration"]
-tags: configure config php-2 php-config upgrade
+category: "How To"
+tags: configure config php php-config upgrade
 ---
-## Keeping PHP Up To Date
+### Introduction
 
 One of the most common reasons for security breaches is out of date software. This could mean applications like Wordpress or even the parser and HTTP server behind it like PHP and nginx. Personally, I feel there really is no excuse to let minor and even major releases roll by other than pure laziness or lack of dedication to the project. However, there are times when you start the upgrade process and you either lost your original `./configure` string or didn't realize that your configure options were in `php -i` or `<? phpinfo(); ?>`.
 

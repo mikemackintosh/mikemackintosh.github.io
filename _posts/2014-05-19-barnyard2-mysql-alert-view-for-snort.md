@@ -2,14 +2,14 @@
 layout: post
 permalink: /barnyard2-mysql-alert-view-for-snort
 title: "Barnyard2 MySQL Alert View for Snort"
-category: ["coding", "databases", "mysql-databases", "security-2"]
-tags: barnyard2 ids mysql-2 security snort
+category: "Security"
+tags: barnyard2 ids mysql view security snort
 ---
-# Barnyard2 Alert View for Snort
+### Introduction
 
 I've been working on a Snort project recently and started logging alerts to a MySQL database. The Barnyard2 MySQL schema is great and effective, but since I don't have time in my sprints to rewrite the tool in a way that would work best for me, I just tossed together a quick view. This way, a simple Sinatra ruby app can use active record to pull the data is a simple query rather than a million joins in your app's source code:
 
-# The SQL
+## The SQL
 
 Because I only wanted 1 query for both TCP and UDP/Other, I left join both of the tables and if it's TCP I will output the data, else null. Some of the columns may not be the best named, as that's the downside to rapid development.
 

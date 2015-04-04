@@ -2,10 +2,10 @@
 layout: post
 permalink: /quickest-way-query-mac-serial-numbers
 title: "Quickest Way To Query Mac Serial Numbers"
-category: ["coding", "mac-osx", "system-administration"]
+category:"How To"
 tags: ioplatformserialnumber ioreg mac mac-get-serial-number-command-line mac-get-serial-number-terminal optimization performance serial-number system_profiler titan
 ---
-## To Long, Didn't Read
+### Introduction
 
 The quickest way to query OS X for a hardware serial number:
 

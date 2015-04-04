@@ -5,13 +5,13 @@ title: "Installing Rockstack On Mac"
 category: ["coding", "dev-tools", "linux-system-administration", "mac-osx", "php-coding", "ruby"]
 tags: devenv mac perl php-2 rock rockstack ruby-2
 ---
-### What Is Rock?
+### Introduction
 
 [Rockstack](http://www.rockstack.org/) is a developer environment (DevEnv) tool that makes installing and managing code bases extremely easy. At my new position, we use the tool frequently to reduce the headache and time to maintain code. A rock project could be any type of code with the addition of a `.rock.yml` file which contains specifics for running your code. It works with PHP, Node, Perl, Ruby and Python.
 
 Some of the benefits include the ability to manage your `composer` dependencies or launch a test server.
 
-### Installation
+## Installing Rock
 
 Before you continue, make sure you have [`homebrew`](http://brew.sh/) installed.
 
@@ -23,7 +23,7 @@ Then install a runtime (or multiple) of your choice:
 
     brew install rock-runtime-php55
 
-### Setting Your Environment
+## Setting Your Environment
 
 To prevent conflicts with binary names, if you install PHP, you will not be able to execute it from your existing `$PATH`. You will need to run:
 
@@ -35,7 +35,7 @@ Example:
 
 Now when you run `php -i` you will get your PHP info output.
 
-### Example `.rock.yml`
+## Example `.rock.yml`
 
 This `.rock.yml` file will set the runtime to `php55`, use `composer` to install and update packages and listen on a local HTTP socket of your choice to test locally. The directory structure for this example is as follows:
 
@@ -85,11 +85,11 @@ You can stick something basic into `index.php`.
     <?php
     include_once '../bootstrap.php';
 
-### Summary
+## Conclusion
 
 These basic steps will get rock running in your Mac with a basic config.
 
-### Gotcha's With Rock perl516
+#### Gotcha's With Rock perl516
 
 I had an issue installing `rock-runtime-perl516`. I would get the following:
 
