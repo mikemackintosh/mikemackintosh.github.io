@@ -8,21 +8,21 @@ csstag: blah
 ---
 
 
-## OMG, DO THEY STILL EXIST?
+### Introduction
 
 Yes. And there's nothing you can do about it. Many companies are not willing to invest in security until they are hit with a massive and expensive breach. Others simply don't see the benefit after seeing companies like Anthem, who has over 200 security professionals on payroll get hit with the largest compromise in web history.
 
 As a one-man security team, I know you have a heck of a lot of responsibilities, with very minimal resources to accomplish your goals. The biggest downfall to one-man security teams is the fact that you don't get to innovate; you're too busy fighting fires on a daily basis and cleaning up other peoples messes. As a result, and to allow you to focus your skillset correctly, you need to define your perimeter.
 
 
-## Establishing a Perimeter
+### Establishing a Perimeter
 
 As a one-man security team, you need to shrink your responsibility as much as possible without sacrificing the integrity of the brand or company. This can simply be done by separating what a security engineer can do from should do. Failure to do so will result in burnout, lack of focus, and lack of motivation.
 
 Here are a few key areas which are often contested in terms of ownership:
 
 
-### Application Security
+#### Application Security
 
 A one-man security engineering team **should:**
 
@@ -59,7 +59,7 @@ A one-man security team **should NOT**:
   - Send customer emails when accounts are breached. This is legal and customer service. Legal needs to let each state know how many accounts were compromised, while customer service is best equipped to work with customers in these situations.
 
 
-### System Security
+#### System Security
 
 A one-man security engineering team **should:**
   
@@ -80,7 +80,7 @@ A one-man security team **should NOT**:
   - Create their own logging infrastructure. There should already be in place (to be PCI compliant), and you need to piggy back off this.
 
 
-### Corporate Security
+#### Corporate Security
 
 A one-man security engineering team **should:**
 
@@ -100,7 +100,7 @@ A one-man security team **should NOT**:
 
  
 
-### Virus Protection and Malware
+#### Virus Protection and Malware
 
 A one-man security engineering team **should:**
 
@@ -119,7 +119,7 @@ A one-man security engineering team **should not**:
   - Deploy security patches to workstations and laptops. This again, is the responsibility of the IT department. 
 
 
-### Acceptable-Use and BYOD Policies
+#### Acceptable-Use and BYOD Policies
 
 A one-man security engineering team **should:**
 
@@ -135,7 +135,7 @@ A one-man security engineering team **should not**:
   - Be filing abuse complaints or take-down requests on behalf of the organization. This should be done by legal. Litigation takes much time, and that's something a one-many security team does not have.
 
 
-### PCI/SOX Compliance
+#### PCI/SOX Compliance
 
 A one-man security engineering team **should:**
 
@@ -152,7 +152,7 @@ A one-man security engineering team **should not:**
   - Be responsible for overseeing the stop gates of SOX compliance release workflows. Your development team executives need to have their balls on the chopping block at some point, and this is it.
 
   
-### SSL Certificates and PKI
+#### SSL Certificates and PKI
 
 A one-man security engineering team **should:**
 
@@ -167,45 +167,45 @@ A one-man security engineering team **should not:**
 
   - Be responsible for generating, upgrading and pushing SSL certificates. If your operations team doesn't understand how to roll out a new SSL cert, including creating it, and getting it signed by a trusted CA, then you have bigger problems to worry about.
 
-## Exposing Your Visibility
+### Exposing Your Visibility
 
 The other hurdle a one-man security team will have is exposing their impact. In short, if you are never hacked, you are doing your job. If you are hacked, well, that just sucks cause we know you did all humanly possible of you. That leads us to your own audit trail.
 
-### Log Everything You Do
+#### Log Everything You Do
 
 Who cares what it is. If you did something log it. If you had to talk to a dev about a best practice, log it. If you told QA they missed a vulnerability, log it. If you see something weird popping up in a dashboard somewhere, log it. 
 
 If you can account for every minute of your day, you can easily show management the impact you bring, the checks and balances you provide, and that you probably work close to 80 hours a week and they under value you. Using something like Trello or Jira is a great way to get this started.
 
-### Create Dashboards
+#### Create Dashboards
 
 Hopefully you're in a position where you can easily create dashboards from data your vendors provide or from internal data.
 
 Here are a few simple ideas of metrics to track:
 
-#### Tracking Internal Server Errors and 500's (SQL Injections)
+##### Tracking Internal Server Errors and 500's (SQL Injections)
 For example, log the number of 500's returned in a web application, before and after giving a talk on the importance of preparing SQL statements. If developers actually paid attention, you will see a huge decrease in blind sql injections.
 
-#### Tracking XSS and Hacker Talk
+##### Tracking XSS and Hacker Talk
 Using Google Search API's and dorks, run daily queries on search results that return XSS and other hacker talk across the web. 
 
-#### Create a Twitter Bot
+##### Create a Twitter Bot
 Using Twitter bots is a great way to see what people are saying about your site. People are pride happy. If they find a vuln on your site, best believe it's on twitter and retweeted before you even know. Use this to show the time between first tweet to patching. Record this time and stick it on a dashboard.
 
-#### Security Bug Bounty
+##### Security Bug Bounty
 Record the `days since` a critical or high severity bug was identified by an app scanner.
 
-#### Monitor Failed Login Attempts via SSH
+##### Monitor Failed Login Attempts via SSH
 This one is awesome. You can create a quick webhook in `.sshrc` on a node that will send notification on successful login. 
 
-#### Brute Force and Dictionary Attacks
+##### Brute Force and Dictionary Attacks
 Use this to identify how many abusers you've identified, to graphing of blocked requests after you ban abusive IP's. This one is always going to be awesome, especially during a huge attack.
 
-#### Total Time to Patch (TTP)
+##### Total Time to Patch (TTP)
 This one is huge. Every time an internet killing vulnerability appears, you can use this towards your advantage. Record the time that you are alerted on the vulnerability, to the time a patch is released, to the time you work with operations to schedule an upgrade, to the time patching has been completed. Use this to show management where communication or responsibilities needs to be corrected.
 
 
-## Summary
+### Conclusion
 
 I know, it can suck. You are in a position where it is difficult to have other teams take responsibility, every battle is uphill, and many of your bright ideas will get shot down thanks to lack of funding. But remember, you're now going to be immersed in a world of hackers, trackers, malware and botting. This is the best place to learn and grow, both professionally and technically, before moving on to your next adventure.
 
