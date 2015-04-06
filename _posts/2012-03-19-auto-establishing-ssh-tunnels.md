@@ -2,7 +2,7 @@
 layout: post
 permalink: /auto-establishing-ssh-tunnels
 title: "Auto-Establishing SSH Tunnels"
-category: system-administration
+category: "System Administration"
 tags: auto-create-ssh-tunnel auto-establishing create-ssh-tunnel-cronjob cron ssh ssh-tunnel ssh2 tunnel
 ---
 I have a cron job which connects manually replicates a database over an SSH tunnel for those 'Oh Sh!t' moments. Sometimes that SSH tunnel will drop or fail to establish. Within the cron job I needed a way to make sure that didn't happen.

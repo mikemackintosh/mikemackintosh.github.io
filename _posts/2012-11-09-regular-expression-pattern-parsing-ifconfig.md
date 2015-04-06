@@ -2,7 +2,7 @@
 layout: post
 permalink: /regex-pattern-parsing-ifconfig
 title: "Regular Expression Pattern Parsing ifconfig"
-category: ["coding", "network", "php-coding"]
+category: "System Administration"
 tags: ifconfig interfaces ip-address mac-address networking parsing php-2 regex
 ---
 

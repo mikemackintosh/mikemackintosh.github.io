@@ -1,10 +1,13 @@
 ---
 layout: post
 permalink: /fix-adb-server-didnt-ack
-title: "Fix: ADB server didn't ACK"
-category: android
+title: "Fixing ADB server didn't ACK"
+category: "Android"
 tags: adt android-coding dev-tools
 ---
+
+### Introduction
+
 The Android development environment is driven by the ADB daemon. We ran into an issue where the ADB server was failing to start. If you have run into this as well, follow the steps below to get it fixed!
 
     adb start-server 
@@ -13,9 +16,14 @@ The Android development environment is driven by the ADB daemon. We ran into an 
     \* failed to start daemon 
     \* 
 
+
+## Starting the Server
+
 The following command will essentially tell you why the ADB daemon is failing to initialize: 
 
     adb nodaemon server
+
+## Results and Fixes
 
 After running this you'll see some of the following reasons. 
 

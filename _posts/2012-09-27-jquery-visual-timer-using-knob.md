@@ -1,11 +1,12 @@
 ---
 layout: post
 permalink: /jquery-visual-timer-using-knob
-title: "jQuery: Visual Timer using knob"
-category: ["uncategorized"]
+title: "Visual Timer using knob"
+category: jQuery
 tags: countdown javascript jquery-knob jquery-visual-countdown knob timer visual-countdown
 ---
-# jQuery Knob
+
+### Introduction
 
 I do a lot of work on dashboard and reporting. I feel there is a very important emphasis on the quality of the visuals used for reporting and the better they are, the more receptive the data.
 
@@ -13,7 +14,7 @@ A project was recently tossed on my plate where I had to display percentages cal
 
 jQuery Knob is very well documented and performs astoundingly. One of the things I was able to slap together for a refresh indicator was a Knob Timer. You would provide some settings much like the stock knob, and it would count down and perform an action.
 
-# Function:
+## Function:
 
 I thought this could be helpful for others, so here is the function:
 
@@ -53,7 +54,7 @@ I thought this could be helpful for others, so here is the function:
         }, 1000); 
     };
 
-# Usage:
+## Usage:
 
 To apply the timer to an element, just issue is like below:
 

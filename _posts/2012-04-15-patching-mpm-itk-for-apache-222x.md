@@ -2,7 +2,7 @@
 layout: post
 permalink: /patching-mpm-itk-for-apache-2-2-2x
 title: "Patching mpm-itk for Apache 2.2.2x"
-category: system-administration
+category: "System Administration"
 tags: apache-2 apache-mpm itk mpm mpm-itk prefork worker
 ---
 ### What is MPM-iTK?
