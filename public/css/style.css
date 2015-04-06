@@ -86,3 +86,14 @@ blockquote p:last-child {
     padding-left: 1.25rem;
   }
 }
+
+pre {
+  background: #f6f6f6 !important;  
+}
+
+pre code {
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  color: #535353 !important;
+}
