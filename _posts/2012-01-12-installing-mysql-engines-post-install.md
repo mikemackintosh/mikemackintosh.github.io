@@ -2,7 +2,7 @@
 layout: post
 permalink: /installing-mysql-engines-post-install
 title: "Installing MySQL Engine(s) Post-Install "
-category: ["uncategorized"]
+category: "System Administration"
 tags: federated innodb myisam mysql-2 mysql-5-5 mysql5-5 remote-databases remote-mysql remote-sql-import remote-tables
 redirect_from:
  - /installing-mysql-engines-post-install/

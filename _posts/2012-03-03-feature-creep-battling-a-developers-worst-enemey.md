@@ -2,7 +2,7 @@
 layout: post
 permalink: /feature-creep-battling-a-developers-worst-enemey
 title: "Feature Creep: Battling A Developers Worst Enemey"
-category: ["uncategorized"]
+category: "Article"
 tags: application-life-cycle application-lifecycle battling beating-feature-creep feature-creep life-cycle
 ---
 

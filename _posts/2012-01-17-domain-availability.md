@@ -2,14 +2,14 @@
 layout: post
 permalink: /domain-availability
 title: "Domain Availability"
-category: ["coding", "php-coding", "system-administration"]
+category: "Asset Management"
 tags: check-domain-availability check-domain-names domain fqdn php-availability php-domain-checker tld top-level-domain validate-domain-names
 ---
-# Checking Domain Availability
+### Introduction
 
 A few client's were looking to expand their internet empire, hoping to automate a process to check domain availability. I put together the below script which would do just that for them. It uses the whois servers from [who.is](http://who.is "who.is"), and makes a simple cURL GET request. The response is then parsed for the text, "appears to be available", and the response is returned. Use as you see fit. The below is now being released under GPLv2. It is a quick, but not fool-proof way of using out-of-date whois servers.
 
-# The Code
+## The Code
 
     function domainAvailability($domain, $tld){ 
         $ch = curl_init("http://who.is/whois/$domain.$tld/");
@@ -36,7 +36,7 @@ A few client's were looking to expand their internet empire, hoping to automate 
     
     (domainAvailability('highonphp', 'net') ? 'Available' : 'Taken')."\n";
 
-# Explanation
+## Explanation
 
 The above code does the following:
 

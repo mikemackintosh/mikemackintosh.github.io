@@ -2,11 +2,12 @@
 layout: post
 permalink: /decoding-udp-dns-requests
 title: "Decoding UDP DNS Requests"
-category: security
+category: Security
 tags: decode-dns-request-packet decode-php decode-php-udp decode-udp dns iptables packet php-2 php-decode-php-request php-dns-request php-sockets php-stream php-udp-decode php5-decode-dns request udp
 ---
 
-## Intro - Why Log DNS Requests
+### Introduction
+
 A client presented a scenario where they wanted to be flagged when certain URL's were queried throughout the day, so they could black hole them for their home network. I put together the following workflow for them: 
 
     Host -> [LAN] -> {FIREWALL} -> (Cloud) 
