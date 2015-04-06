@@ -1,17 +1,41 @@
 ---
 layout: post
 permalink: /jquery-creating-a-hover-timeout
-title: "jQuery: Creating A Hover Timeout"
-category: ["uncategorized"]
+title: "Creating A Hover Timeout"
+category: "jQuery"
 tags: hover hover-timeout javascript-mouseover jquery-2 mouseout mouseover timeout
 ---
-# Creating a Hover Timeout
-I came across the need to detect and delay a hover before executing a function. The page was full of images, and when hovered over, would create an AJAX request to the server and display in a popup. Here is an example on how to achieve it. [javascript] $('img.expand').bind({ mouseover: function() { obj = $(this); jQueryTimeout = setTimeout(function() { $.post('/target-uri', { 'attribute1':obj.attr('title'), 'attribute2':obj.attr('href') }, function(response){ console.log(response); }, 'json' ); }, 2000); }, mouseleave: function() { clearTimeout(jQueryTimeout); } }); [/javascript]  
+### Introduction
+I came across the need to detect and delay a hover before executing a function. The page was full of images, and when hovered over, would create an AJAX request to the server and display in a popup. 
 
-# Demo
-In the demo, there is a link, 'here', and if you hover over it for 2 seconds, it will display the title attribute in the input text field below.<script type="text/JavaScript">
+## A Quick Example
+Here is an example on how to achieve it. 
+
+```
+$('img.expand').bind({ mouseover: function() { 
+	obj = $(this); 
+	jQueryTimeout = setTimeout(function() { 
+		$.post('/target-uri', 
+		{ 'attribute1':obj.attr('title'), 'attribute2':obj.attr('href') }, 
+		function(response){ 
+			console.log(response); 
+		}, 
+		'json' ); 
+		}, 
+		2000); 
+	}, 
+	mouseleave: function() { 
+		clearTimeout(jQueryTimeout); 
+	} 
+});
+```
+
+## Demo
+In the demo, there is a link, 'here', and if you hover over it for 2 seconds, it will display the title attribute in the input text field below.
+
+<script type="text/JavaScript">
 $(document).ready(function(){
-    	$('.demo').bind({
+    $('.demo').bind({
 		mouseover: function() {
 			obj = $(this);
 			hoverTimeout = setTimeout(function() {
@@ -25,12 +49,13 @@ $(document).ready(function(){
 });
 </script>
 
-This is a demo. Hover here
+This is a demo. Hover here:
 
 <input type="text" class="demo-target" value="">
 
-# Demo Code
-[javascript]<script>
+## Demo Code
+```
+<script>
 $(document).ready(function(){
     	$(document).ready(function(e) {
 
@@ -46,4 +71,4 @@ $(document).ready(function(){
 		}
 	});
 });
-</script>[/javascript]
+```

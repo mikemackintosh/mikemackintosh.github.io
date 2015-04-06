@@ -2,12 +2,27 @@
 layout: post
 permalink: /php-ssh2-class-with-exception-handling
 title: "PHP SSH2 Class with Exception Handling"
-category: ["uncategorized"]
-tags: php-ssh php-ssh2 ssh2 ssh2_exec ssh2_shell vt100
+category: "System Administration"
+tags: php-ssh php-ssh2 ssh2 ssh2_exec ssh2_shell vt100 linux remote shell prompt
 ---
-# SSH2 Wrapper Class
-The following class takes some of the ideas used to create a contextual socket, and applied to the setup of a SSH2 stream. Currently, only password authentication is supported, but will be updated shortly. Support for SCP and SFTP will be included at a later time.
-# SSH2 Usage
-[php] $options = array( 'host' => '127.0.0.1', 'port' => 22, 'auth' => array( 'type' => SSH2::PASS, 'username' => 'user', 'password' => 'password', 'fingerprint' => 'xxxx', 'ssh\_auth\_pub' => '3sg325235y43yre', 'ssh\_auth\_priv' => '3sg325235y43yre', 'ssh\_auth\_priv\_key' => '3sg325235y43yre', ) ); try{ $ssh = new SSH2($options)->connect(); if($ssh->authenticate()){ /\* For devices which support OpenSSH and OpenSSH2 Variants \*/ $exampleOutput = $ssh->exec(array('ls -lSha', 'cat ~/.bashrc')); if(!$exampleOutput ){ echo $ssh->getLastError(); }else{ echo $exampleOutput ; } /\* For devices which support net-sshd, vt100, etc \*/ $exampleOutput = $ssh->shell(array('ls -lSha', 'cat ~/.bashrc')); if(!$exampleOutput ){ echo $ssh->getLastError(); }else{ echo $exampleOutput ; } } $ssh->disconnect(); } catch(SSH2FailedToConnectException $e){ print\_r($e->getMessage()); } catch(SSH2FailedToAuthenticate $e){ print\_r($e->getMessage()); } [/php]
-# Get The SSH2 Class
-[php] class SSH2{ private static $connection; private $error; var $port = 22; const PASS = 'password'; const PUBKEY = 'publickey'; public function \_\_construct(Array $options){ foreach($options as $opt => $value){ $this->$opt = $value; } return $this; } final function xdisconnect($reason, $message, $language) { printf("Server disconnected with reason code [%d] and message: %s\n", $reason, $message); } final function connect(){ $callbacks = array('disconnect' => 'xdisconnect'); self::$connection = @ssh2\_connect($this->host, $this->port, NULL, $callbacks); if(self::$connection === FALSE){ throw new SSH2FailedToConnectException($this->host, $this->port); return false; } $this->fingerprint = @ssh2\_fingerprint(self::$connection); return true; } // sm business final function authenticate(){ $method = "ssh2\_auth\_{$this->auth['type']}"; if(@$method(self::$connection, $this->auth['username'], $this->auth['password']) === FALSE){ throw new SSH2FailedToAuthenticate($this->host, $this->auth['username'], $this->auth['type']); return false; }else{ return true; } } public function exec($cmd){ if(is\_array($cmd)){ foreach($cmd as $command){ $stream = @ssh2\_exec(self::$connection, $command); $errorStream = @ssh2\_fetch\_stream($stream, SSH2\_STREAM\_STDERR); /\* Enable Blocking \*/ @stream\_set\_blocking($errorStream, true); @stream\_set\_blocking($stream, true); /\* Grab Response \*/ $response .= stream\_get\_contents($stream); $this->error .= stream\_get\_contents($errorStream); } } else{ $stream = @ssh2\_exec(self::$connection, $cmd); $errorStream = @ssh2\_fetch\_stream($stream, SSH2\_STREAM\_STDERR); /\* Enable Blocking \*/ @stream\_set\_blocking($errorStream, true); @stream\_set\_blocking($stream, true); /\* Grab Response \*/ $response .= stream\_get\_contents($stream); $this->error .= stream\_get\_contents($errorStream); } if(is\_null($response)){ return false; } return $response; } final function shell($cmd){ $stream = ssh2\_shell (self::$connection, 'vt102', null, 80, 40, SSH2\_TERM\_UNIT\_CHARS); $output = NULL; if(is\_array($cmd)){ foreach($cmd as $command){ fwrite($stream, $command.PHP\_EOL); sleep(2); while(( $res = stream\_get\_contents($stream, -1)) !== false){ $output .= $res; if($res == ''){ break; } } } } else{ fwrite($stream, $cmd.PHP\_EOL); sleep(2); while(( $res = stream\_get\_contents($stream, -1)) !== false){ $output .= $res; if($res == ''){ break; } } } fwrite($stream, 'exit'.PHP\_EOL); return $output; } public function disconnect(){ @ssh2\_exec(self::$connection, 'exit'); } public function getLastError(){ return $this->error; } } /\* \* Thrown if a class tries to access the XML parser's functionality \* \* @author sixeightzero \* @license http://opensource.org/licenses/gpl-license.php GNU General Public Licence \* @copyright (c) 2011 - Mike Mackintosh \* @version 0.1 \* @package Zepnik Framework \*/ final class SSH2FailedToConnectException extends Exception { /\*\* \* Sets the error message \* \* @todo Add logger output \*/ public function \_\_construct($host, $port) { $message = "Failed to connect to host '{$host}' on port {$port}\n"; // Call the parent constructor parent::\_\_construct($message); } } final class SSH2FailedToAuthenticate extends Exception { /\*\* \* Sets the error message \* \* @todo Add logger output \*/ public function \_\_construct($host, $username, $type) { $message = "Failed to authenticate '{$username}' by '{$type}' on host '{$host}'\n"; // Call the parent constructor parent::\_\_construct($message); } } [/php]
+
+### Introduction
+
+In a previous role, I was responsible for running diagnostics on remote networking devices and parsing the output to gather important details on their current status and health. To keep all aspects of the code consistent, which was written in PHP, I used the `SSH2` PECL module, which I was easily able to dynamically load into the PHP config.
+
+The downside is that, there was not much error handling in this default class. Because the code was being used to support a mission critical network, that a lot of people here used on a daily basis, there was no margin for error. 
+
+Below I have included an example and the source class which adds exception handling to `SSH2` for PHP.
+
+## Here's an Example
+
+{% gist mikemackintosh/4a295d21f41d982d996a auth_example.php %}
+{% gist mikemackintosh/4a295d21f41d982d996a example.php %}
+
+## Getting the Code
+
+The code is hosted in a Gist, which we have included below:
+
+{% gist mikemackintosh/4a295d21f41d982d996a ssh2.php %}
+
+

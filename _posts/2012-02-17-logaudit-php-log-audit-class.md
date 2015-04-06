@@ -2,7 +2,7 @@
 layout: post
 permalink: /logaudit
 title: "LogAudit: PHP Log Audit Class"
-category: system-administration
+category: "System Administration"
 tags: varlog audit daemon fcaps linux log logaudit multidimensional-arrays namespace php-log-audit php-multidimensional-array-search php5 php5-3 recursive-iterator recursiveiterator security
 redirect_from:
  - /php/logaudit

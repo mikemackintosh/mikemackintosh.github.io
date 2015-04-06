@@ -2,17 +2,18 @@
 layout: post
 permalink: /mysql-fatal-error-my-print-defaults
 title: "Fatal Error: Could not find ./bin/my_print_defaults"
-category: ["uncategorized"]
+category: "Gotcha"
 tags: could-not-find fatal-error my-print-defaults mysql-2 mysql5-5 my_print_defaults percona
 ---
 
+### Introduction
 I was installing new servers in my lab for an application that's about to be deployed. I was taking the normal steps which include MySQL, PHP and Apache which I have documented in the [Web Server Basics article](http://www.highonphp.com/web-server-basics-part-1-an-introduction). While installing Percona, I ran across the following error: 
 
-		 root@ubuntu:/home/splug/Percona-Server-5.5.17-rel22.1# /usr/local/mysql-5.5/bin/mysql_install_db 
+    # /usr/local/mysql-5.5/bin/mysql_install_db 
 
-     FATAL ERROR: Could not find ./bin/my_print_defaults 
+    FATAL ERROR: Could not find ./bin/my_print_defaults 
 
-     If you compiled from source, you need to run 'make install' to copy the software into the correct location ready for operation. If you are using a binary release, you must either be at the top level of the extracted archive, or pass the --basedir option pointing to that location.
+    If you compiled from source, you need to run 'make install' to copy the software into the correct location ready for operation. If you are using a binary release, you must either be at the top level of the extracted archive, or pass the --basedir option pointing to that location.
 
 If you use my article, the MySQL page documents how to circumvent the issue. To get the location of your `my_print_defaults` binary, use the `which` command: 
 
@@ -20,7 +21,7 @@ If you use my article, the MySQL page documents how to circumvent the issue. To 
 
 Then you can re-run the `mysql_install_db` script passing the `--basedir` option, leaving off the `/bin/my_print_defaults`: 
 
-		root@ubuntu:/home/splug/Percona-Server-5.5.17-rel22.1# ./scripts/mysql_install_db --basedir=/usr/local/mysql-5.5 --user=mysql 
+	# ./scripts/mysql_install_db --basedir=/usr/local/mysql-5.5 --user=mysql 
     Installing MySQL system tables... 
     120302 10:03:08 [Note] Flashcache bypass: disabled 
     120302 10:03:08 [Note] Flashcache setup error is : ioctl failed OK Filling help tables... 
