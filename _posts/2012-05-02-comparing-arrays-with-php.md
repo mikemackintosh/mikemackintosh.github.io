@@ -31,6 +31,7 @@ $comparable = ['a', 'c', 'e', 'g', 'y'];
 ```
 
 Compare them using `array_compare`:
+
 ```
 var_dump(array_compare($weighted, $comparable));
 array(7) {

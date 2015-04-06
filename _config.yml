@@ -4,7 +4,6 @@ production_url : https://www.mikemackintosh.com
 #relative_permalinks: true
 markdown: redcarpet
 highlighter: pygments
-extensions: [fenced_code_blocks]
 redirects: yes
 exclude: [vendor]
 
