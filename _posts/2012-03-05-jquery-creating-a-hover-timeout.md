@@ -49,7 +49,7 @@ $(document).ready(function(){
 });
 </script>
 
-This is a demo. Hover <a href="#" class="demo">here</a>:
+This is a demo. Hover <a href="#" title="This SHould Now Appear In Textarea" class="demo">here</a>:
 
 <input type="text" class="demo-target" value="">
 
