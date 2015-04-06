@@ -9,7 +9,7 @@ tags: 128-bit 32-bit 64-bit bits bitwise broadcast bytes databases-2 dtr_ntop dt
 
 With IPv4, it was simple enough to use [`ip2long`](http://www.php.net/manual/en/function.ip2long.php) and [`long2ip`](http://www.php.net/manual/en/function.long2ip.php). These two functions would translate a dotted decimal address to an integer and the reverse respectively. In IPv6, we don't have such luxury.
 
-An IPv4 address consists of 32-bits, which most operating systems and programming languages are able to natively support. Since 32-bit platforms support unsigned integers between `` and `4,294,967,295`, which is also the maximum number of IPv4 IP's, working with IP address pragmatically would not exhaust memory and processing capabilities. This would be the equivalent of saying 2<sup>32</sup>. The `ip2long` function only supports integers up to the max of the operating system and architecture.
+An IPv4 address consists of 32-bits, which most operating systems and programming languages are able to natively support. Since 32-bit platforms support unsigned integers between `0` and `4,294,967,295`, which is also the maximum number of IPv4 IP's, working with IP address pragmatically would not exhaust memory and processing capabilities. This would be the equivalent of saying 2<sup>32</sup>. The `ip2long` function only supports integers up to the max of the operating system and architecture.
 
 IPv6 is a different story. Most machines currently in production are on 64-bit architecture and running a 64-bit operating system. The largest unsigned integer possible on 64-bit platforms is `18,446,744,073,709,551,616`, or 2<sup>64</sup>. This falls short of the possible `340,282,366,920,938,463,463,374,607,431,770,000,000` or 2<sup>128</sup> addresses available in IPv6. These numbers are VERY large and cumbersome and it's easy to see some of the restrictions when working with them.
 
@@ -229,7 +229,7 @@ The response would be:
 
 If you have a dynamic need to store IP addresses in string notation to your database, your best bet would be a `VARCHAR(39)`. If you want to store the binary version of the IP, use a `VARBINARY(39)`. This allows for enough storage to be provisioned to hold an entire IPv6 address.
 
-If you have the ability to install UDF's (User-Defined Functions) in MySQL, and are running version 5.6.2 or lower, I would highly suggest you download an install these from [WatchMouse: INET6\_PTON and INET6\_NTOP](http://labs.watchmouse.com/2009/10/extending-mysql-5-with-ipv6-functions/). These functions along with a mask function allow you to store and retrieve the binary interpretation of an IP through MySQL statements.
+If you have the ability to install UDF's (User-Defined Functions) in MySQL, and are running version 5.6.2 or lower, I would highly suggest you download an install these from [WatchMouse: INET6_PTON and INET6_NTOP](http://labs.watchmouse.com/2009/10/extending-mysql-5-with-ipv6-functions/). These functions along with a mask function allow you to store and retrieve the binary interpretation of an IP through MySQL statements.
 
 **_Note:_** MySQL only recently added support for these functions in 5.6.3 and above.
 

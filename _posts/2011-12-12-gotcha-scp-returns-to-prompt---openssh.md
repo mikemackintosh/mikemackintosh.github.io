@@ -2,11 +2,11 @@
 layout: post
 permalink: /scp-returns-to-prompt
 title: "Gotcha: SCP Returns To Prompt - OpenSSH"
-category: system-administration
+category: "Networking"
 tags: debug1-exit-status-1 linux-scp-failed scp-v-f-ns_sys_config scp-auto-return scp-cli scp-command-line scp-failed-for-11-10 scp-failure scp-failures scp-returns-to-prompt sending-command-scp-v-f-ns_sys_config ubuntu-10-04-scp-failures ubuntu-10-11-scp-failures ubuntu-scp-fail ubuntu-scp-failures ubuntu-ssh-failures
 ---
 
-## Background - SCP Failing
+### Introduction
 On my lab network, I have a box which will reach out to my application gateways and SCP statistics back to my reporting server. I took this idea, and applied it to an audit solution, where I would grab the config of a router/firewall/switch, and return it back to my Audit appliance. It worked great for most devices, but when I ran it against some Juniper ISG's, it hit a brick wall, figuratively. 
 
 ## The Issue
@@ -17,12 +17,12 @@ The issue is the addition of double dash's in the SCP command, which is sent to 
 
  The `-v` is used for verbose mode, which is where the excerpt above came from. The `-f` is to tell the destination device to expect a filename, and the `--` is to tell the remote host that all switches have been communicated. Not all SSH capable devices support the `--` feature, resulting in the appending it to the filename. You can correct this by patching the local host which reaches out to these non-compliant devices. Here is some example output of the error. 
 
- ### Without verbosity (-v): 
+ #### Without verbosity (-v): 
 
 		 scp -v admin@10.2.4.239:ns_sys_config /backup/config/10.2.4.239.cfg 
      Password:
 
- ### With verbosity (-v): 
+ #### With verbosity (-v): 
 
 		 scp -v admin@10.2.4.239:ns_sys_config /backup/config/10.2.4.239.cfg 
      Password:

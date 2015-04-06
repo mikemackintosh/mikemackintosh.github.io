@@ -2,7 +2,7 @@
 layout: post
 permalink: /jquery-resizr
 title: "ResizR - jQuery Auto-Width"
-category: ["derp"]
+category: "jQuery"
 tags: auto-change-width-jquery div dynamic-width-java dynamic-width-javascript html5 jquery-2 jquery-change-width jquery-custom-fucntion jquery-div-width jquery-dynamic-width jquery-function jquery-page-width jquery-resolution-width jquery-set-div-width width
 ---
 # Background: The Need For Resizr

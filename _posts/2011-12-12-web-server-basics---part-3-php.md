@@ -2,12 +2,12 @@
 layout: post
 permalink: /web-server-basics-part-3-php
 title: "Web Server Basics - Part 3: PHP"
-category: system-administration
+category: "How To"
 tags: compile-linux-php-apache compile-php compile-php-from compile-php-from-source compile-php-from-source-on-ubuntu-11-10 configure-php configure-php-from-source configure-php-on-ubuntu high-on-php high-php-performance install-high-on-php install-php-without-deb performance-for-php php-4 php-5-3-5 php-5-3-6 php-5-3-7 php-5-3-8 php-5-4 php-configure php-deb php-dependencies php-from-nothing php-from-scratch php-from-source php-from-source-on-ubuntu php-high-on php-on-ubuntu php-performance php5 php5-3-8 php54 scratch-php
 ---
 
 
-## Background - PHP
+### Introduction
 PHP is another one of those iconic milestones in the history of the internet. Started by Rasmus Lerdorf back in the mid-90's (similar to Apache), it was originally used to manage his _personal home page_. This set of Perl scripts, made up what was called _PHP Tools_ and was the foundation of PHP3. Over the past couple of years, there have been some significant changes to PHP to really help it mature. It has been transformed into a solid and globally accepted language which can serve many purposes. PHP is not just used to serve dynamic web pages, but is also used in desktop application development using GTK and/or PHAR, system administration using the CLI aspect, and is used to interface with hundreds of systems. With a growing fan-base, will go strong for decades into the future._Updated: Feb 12, 2012_For this article, we will be using version 5.3.10.
 
 

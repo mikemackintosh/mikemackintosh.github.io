@@ -2,10 +2,10 @@
 layout: post
 permalink: /ssh-tunneling
 title: "Create an SSH Tunnel"
-category: security
+category: "Security"
 tags: create-ssh-tunnel create-ssh2-tunnel creating-an-ssh-tunnel forward-traffic php-ssh2-tunneling php-tunnel ssh-tunnel ssh-tunneling ssh-tunnels ssh1-tunneling ssh2-forwarding-traffic ssh2-tunnel ssh2-tunneling ssh2-tunnels
 ---
-## Background: The Need For A Tunnel
+### Background: The Need For A Tunnel
 For hundreds of years, our civilization has been building tunnels to circumvent blocks. In the technical world, the need it still there. When a device sites behind a firewall with specific ports blocked, you can proxy your traffic through a server/host on the outside to reach your destination. Below, you can find some example scenarios and the commands used to accomplish the task. 
 
 **Note**: From a security perspective, the firewall ports and/or networks are blocked for a reason, so you should only do this if you understand the risks and know what you are doing.

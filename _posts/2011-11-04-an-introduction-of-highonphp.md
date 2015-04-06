@@ -2,7 +2,7 @@
 layout: post
 permalink: /introduction-of-highonphp
 title: "An Introduction of HighOnPHP"
-category: ["state-of"]
+category: "State Of"
 tags: hghonphh high high-on-php high-performance highonphp highonphp5 hiphopphp on php-2 php5 welcome
 ---
 ## Background

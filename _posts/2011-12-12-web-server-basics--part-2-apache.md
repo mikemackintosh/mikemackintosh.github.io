@@ -2,11 +2,11 @@
 layout: post
 permalink: /web-server-basics-part-2-apache
 title: "Web Server Basics – Part 2: Apache"
-category: system-administration
+category: "How To"
 tags: aamp apache-2 apache-from-source apache-from-sourcecode apache-mysql-php apache2 apache2-from-source apache2-2 compile-apache compile-apache-2-2-21 compile-apache-linux compile-apache-so compile-linux-php-apache hamp install-apache-ubuntu-2 lamp linux-apache-mysql-php linux-compile-apache ubunt-11-10-install-apache ubuntu-apache-2 wamp xamp
 ---
 
-## Background - Apache
+### Introduction - Apache
 Since the mid 1990's, Apache has been the most popular HTTP server. There are a few reasons for that, including simplicity, low overhead and it's **FREE**. Installing, configuring and managing an Apache server looks great on a resume, but looks even better when you look back at yourself. Since so many applications and services rely on web servers, it is a good idea to try and install one, to see how and why they work. Following the steps below will walk you through the steps to install Apache from source. For this article, we will be using version 2.2.21.
 
 ## Step 1 - Dependencies

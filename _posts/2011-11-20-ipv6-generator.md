@@ -2,7 +2,7 @@
 layout: post
 permalink: /ipv6-generator
 title: "IPv6 Generator"
-category: ["uncategorized"]
+category: "Networking"
 tags: generate-ipv6-addresses generate-ipv6-addresses-ipv6 generate-ipv6-addresses-php ip-v6 ipv6 ipv6-generator ipv6-looping-script ipv6-php-testing-script ipv6-subnet ipv6-subnetting loop-ipv6 networks-ipv6 php-2 php-ipv6-generator subnet-ipv6 v6-php-v6
 ---
 # Background - IPv6

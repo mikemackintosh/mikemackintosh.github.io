@@ -2,13 +2,13 @@
 layout: post
 permalink: /syslog-log-remote-hosts-to-seperate-files
 title: "Syslog: Log Remote Hosts To Seperate Files"
-category: system-administration
+category: "How To"
 tags: change-syslog-file change-syslog-output file-output-syslog new-syslog-file remote-sysklogd remote-syslog remote-syslog-file sysklogd syslog syslog-file syslog-file-out syslog-to-seperate-file syslogd ubuntu-syslog ubuntu-syslog-file
 ---
-# Background: Syslogging
+### Introduction
 I have been making a lot of changes to my lab network, which includes the addition of new networks and honey pots. To save on costs, I purchased a new Linksys router and the first step out-of-box was installing DD-WRT. The steps included below will work with anything that supports remote syslog. 
 
-# My Syslog Environment
+## My Syslog Environment
 
 | Server Description | Server IP | FQDN |
 | --- | --- | --- |
@@ -19,7 +19,7 @@ I have been making a lot of changes to my lab network, which includes the additi
 | Application Server | 10.1.23.42 | v3x.skynet.local.mikemackintosh.com |
 | --- | --- | --- |
 
-# Step 1 - Installing Sysklogd
+## Step 1 - Installing Sysklogd
 
 On Deb Based Systems: 
 
@@ -30,7 +30,7 @@ On RPM Based Systems:
     yum install sysklogd
 
 
-# Step 2 - Configuring Sysklogd
+## Step 2 - Configuring Sysklogd
 
 There are two configuration files for sysklogd. One is installed at `/etc/syslog.conf`. The other, the defaults file, is located at `/etc/default/syslogd`. Open these file in your favorite editor. First, we are going to edit `/etc/default/syslogd`. 
 
@@ -50,7 +50,7 @@ To listen by hostname, use the following syntax:
 
     +v3x.skynet.local.mikemackintosh.com *.* /var/log/appserver.log
 
-# Last Step
+## Last Step
 
 Point your hosts to your new syslog server's ip! 
 

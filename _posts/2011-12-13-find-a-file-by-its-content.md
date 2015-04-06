@@ -2,11 +2,11 @@
 layout: post
 permalink: /how-to-find-file-by-content
 title: "Find A File By It's Content"
-category: system-administration
-tags: body content content-of-file file file-file-by-content file-find-in filename find-contents-in-file find-file-name-by-content find-filename find-in-file linux-find-content-from-file linux-find-in-file linux-find-witihin-file return return-filename-from-content return-filename-with-body search search-file-by-content search-filename-with-content search-filesystem-for-content search-for-file-with-content search-for-file-with-in-file search-within-file
+category: "How To"
+tags: body content content-of-file linux file file-file-by-content file-find-in filename find-contents-in-file find-file-name-by-content find-filename find-in-file linux-find-content-from-file linux-find-in-file linux-find-witihin-file return return-filename-from-content return-filename-with-body search search-file-by-content search-filename-with-content search-filesystem-for-content search-for-file-with-content search-for-file-with-in-file search-within-file
 ---
 
-## Background - Finding a File
+### Introduction
 Within Linux, there are hundreds of ways to find a file. It all depends on what you are most comfortable using. Back in the day, located was the poison of choice, but after learning find, it was soon replaced. Find is a very powerful utility, especially when it comes to looking for specific files.
 
 ## The Search

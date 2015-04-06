@@ -2,8 +2,8 @@
 layout: post
 permalink: /mysql-and-unix-timestamps
 title: "MySQL and Unix Timestamps"
-category: ["databases", "linux-system-administration", "mysql-databases"]
-tags: date date-format epoc epoch mysql-time mysql-timestamp seconds time timestamp unix unixtimestamp
+category: "MySQL"
+tags: date databases linux-system-administration mysql-databases date-format epoc epoch mysql-time mysql-timestamp seconds time timestamp unix unixtimestamp
 redirect_from:
  - /mysql-and-unix-timestamps/trackback/
  - /mysql-and-unix-timestamps/feed/

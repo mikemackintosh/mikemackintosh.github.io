@@ -2,15 +2,15 @@
 layout: post
 permalink: /web-server-basics-part-1-mysql
 title: "Web Server Basics - Part 1: MySQL"
-category: system-administration
+category: "How To"
 tags: database fedora-mysql innodb install-mysql install-percona install-percona-from-source install-percona-on-ubuntu install-ubuntu-percona-from-source installation-from-source mysql-2 mysql-fast mysql-percona optimize-innodb percona percona-innodb percona-mysql percona-ubuntu ubuntu-mysql
 ---
-# Background - MySQL
+### Introduction
 A few months ago, I stumbled onto a product called [Percona](http://www.percona.com/ "Percona, MySQL Experts"). Percona is based off MySQL's open source code, so everything you may already be familiar with is still the same. Essentially, it is a matured, nurtured version of MySQL on a sugar rush. The idea behind Percona is to pretty much switch your database engine to InnoDB and tweak some settings.  
 
 **Note:** I skipped a tutorial on installing Linux as I am very distribution agnostic. I love Gentoo, Ubuntu, Mandriva, Fedora and NetBSD; All walks of life. When I talk about installing packages/dependencies, they may not match the naming convention or package name on your system, especially if I refer to them as aptitude packages and you're using yum. I've done my best from memory to accommodate both environments. Any issues, please post a comment below.
 
-# Step 1 - Dependencies
+## Step 1 - Dependencies
 Before we start, we need to make sure that our system has all the required packages installed. The following commands will install what you need: On Deb: 
 
 		sudo apt-get install libncurses5-dev automake libtool cmake g++ build-essential libncurses5-dev bison
@@ -20,14 +20,14 @@ Before we start, we need to make sure that our system has all the required packa
 		sudo yum install ncurses-devel bison-devel automake g++ libtool
 
 
-# Step 2 - Get The Source
+## Step 2 - Get The Source
 First things first, get the source. You can do so by following this link: [Source Code](http://www.percona.com/redir/downloads/Percona-Server-5.5/Percona-Server-5.5.17-22.1/source/Percona-Server-5.5.17-rel22.1.tar.gz "Percona Source") or by following the steps below on your server. 
 
 		 wget http://www.percona.com/redir/downloads/Percona-Server-5.5/Percona-Server-5.5.17-22.1/source/Percona-Server-5.5.17-rel22.1.tar.gz 
      tar xvzf Percona-Server-5.5.17-rel22.1.tar.gz cd Percona-Server-5.5.17-rel22.1 
 
 
-# Step 3 - Compile
+## Step 3 - Compile
 If you followed the steps above, you have downloaded, extracted and moved into your new directory. Next we need to execute the build file and configure. 
 
 		 sh BUILD/autorun.sh 
@@ -39,7 +39,7 @@ If you followed the steps above, you have downloaded, extracted and moved into y
      sudo make install 
 
 
-# Step 4 - Postmortem
+## Step 4 - Postmortem
 After you have completed the steps above, it's time to make some changes to your system to support this new application. 
 
 		 export PATH=$PATH:/usr/local/mysql-5.5/bin 
@@ -74,7 +74,7 @@ If you want MySQL to start automatically on system boot, you can run the followi
 		 sudo /etc/init.d/mysql start 
 
 
-# Step 5 - Verify It's Running
+## Step 5 - Verify It's Running
 Run `netstat` to check to make sure your system is listening on `3306/mysql`: 
 
 		 netstat -a | grep mysql 
@@ -88,10 +88,10 @@ Run `netstat` to check to make sure your system is listening on `3306/mysql`:
 
  **Security Note:** To prevent MySQL from listening on port 3306, add `skip-networking` to your `/etc/my.cnf` file and restart.
 
-# Time for Apache
+## Time for Apache
  [Continue to Part 2: Apache](http://www.highonphp.com/web-server-basics-part-2-apache "Installing Apache from Source")
 
-# Gotacha's
+## Gotacha's
 If you run into the following error: 
 
 		FATAL ERROR: Could not find ./bin/my_print_defaults

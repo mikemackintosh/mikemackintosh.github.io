@@ -2,7 +2,7 @@
 layout: post
 permalink: /multidimensional-array-search
 title: "Multidimensional Array Search in PHP"
-category: ["coding", "php-coding"]
+category: "PHP"
 tags: array arrays find-array-value find-in-array multi-arrays multidimensional multidimensional-arrays php-2 php-array-value-search php-arrays php-find-in-array php-find-in-value-array php-multidimensional-array-search php-search-array php-search-array-value php-search-arrays search-arrays
 ---
 # Working with Arrays

@@ -2,7 +2,7 @@
 layout: post
 permalink: /windows-filetime-to-unix
 title: "Windows Filetime to Unix"
-category: ["coding", "ldap-databases", "php-coding", "system-administration", "windows"]
+category: "Windows"
 tags: active-directory ldap php-active-directory-time php-timestamp php-windows-time php-windows-timestamp unix-to-windows-time unixtime wft windows-2-unix windows-file-time-to-unix-timestamp windows-filetime windows-ftime windows-time-to-unix windows-time-to-unix-time windows-to-unix-time
 ---
 # Working with Windows Timestamps

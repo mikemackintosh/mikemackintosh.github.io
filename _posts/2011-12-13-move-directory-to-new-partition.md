@@ -2,10 +2,10 @@
 layout: post
 permalink: /move-directory-to-new-partition
 title: "Move Directory To New Partition"
-category: system-administration
-tags: 
+category: "How To"
+tags: linux lvm partition filesystem
 ---
-## Background - Why Move A Directory
+### Background - Why Move A Directory
 
 I have a cluster of servers which has a master database server. Originally, the total size of `/` was `32GB`. For the application it was serving, it was ideal; small drive size, less fragmentation, no swap space - a perfect database environment. Some changes went into the application that began logging outputs from remote commands which were run, and the size of the database increased from 200,000 rows to over 5 million in 48 hours. This increase in rows lead to a dramatic increase in size of the database files, causing the server to crash. I had to add a new drive, format, partition and move the database directory to a new filesystem to restore it. These are some of the steps I took.
 

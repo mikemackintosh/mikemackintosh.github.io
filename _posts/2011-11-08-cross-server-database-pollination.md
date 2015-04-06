@@ -2,7 +2,7 @@
 layout: post
 permalink: /cross-server-database-pollination
 title: "Cross-Server Database Pollination"
-category: ["uncategorized"]
+category: "MySQL"
 tags: automatic-sql-import database manual-replication mysql-2 mysql-export mysql-import mysql-manual-replication mysql-replication mysql-server mysqld mysqldump remote-mysql remote-mysql-export remote-mysql-import remote-sql-import replication server unix-mysql
 ---
 # Background
