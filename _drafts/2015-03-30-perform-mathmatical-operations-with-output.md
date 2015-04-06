@@ -2,7 +2,7 @@
 layout: post
 title: "Perform Mathmatical Operations With Output"
 category: Bash
-tags: 
+tags: bash arithmetic 
 ---
 
 
