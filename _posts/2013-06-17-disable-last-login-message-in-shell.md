@@ -2,7 +2,7 @@
 layout: post
 permalink: /disable-last-login-message-in-shell
 title: "Disable Last Login Message in Shell"
-category: ["coding", "fedora", "linux-system-administration", "mac-osx", "system-administration", "ubuntu-linux-system-administration"]
+category: "How To"
 tags: bash cli command-line last-login sh shell tty vtty
 ---
 ## Default Messages When Launching Shell

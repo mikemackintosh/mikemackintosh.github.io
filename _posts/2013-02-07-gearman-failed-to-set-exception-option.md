@@ -2,7 +2,7 @@
 layout: post
 permalink: /gearman-failed-to-set-exception-option
 title: "Gearman: Failed to set exception option"
-category: automation
+category: Gotcha
 tags: client gearman php threading worker
 ---
 

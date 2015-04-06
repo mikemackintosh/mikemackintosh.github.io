@@ -1,11 +1,11 @@
 ---
 layout: post
 permalink: /fixing-soap-exception-no-xml
-title: "Fixing SOAP Exception: \"looks like we got no XML document\""
-category: ["coding", "network", "php-coding", "services", "system-administration"]
+title: "Fix SOAP Exception: \"looks like we got no XML document\""
+category: "How To"
 tags: api client integration server soap soap-server soapclient soapserver xml
 ---
-## Working with SOAP
+### Working with SOAP
 
 Personally, I hate SOAP. It is a bloated, slow and painful API service, but allows for cross platform support out of the box. It is XML driven and allows you to transports large amounts of data to and from a server.
 

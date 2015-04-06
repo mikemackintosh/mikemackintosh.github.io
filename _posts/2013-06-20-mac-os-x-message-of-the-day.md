@@ -2,7 +2,7 @@
 layout: post
 permalink: /mac-os-x-message-of-the-day
 title: "Mac OS X Message of the Day"
-category: ["uncategorized"]
+category: "How To"
 tags: bash cli dynmotd message-of-the-day motd php-2 pty putty sh shell terminal vtty
 ---
 ## What is the Message of the Day

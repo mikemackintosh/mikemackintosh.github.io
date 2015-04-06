@@ -2,16 +2,16 @@
 layout: post
 permalink: /bing-and-phantom-bandwidth
 title: "Bing and Phantom Bandwidth"
-category: ["security-2", "services", "system-administration", "web-servers"]
+category: "Security"
 tags: bing bots crawl crawl-bots google robots robots-txt site5
 ---
-# Bing is the Devil
+### Bing is the Devil
 
 We have a client that is hosted on [Site5](http://www.site5.com/in.php?id=22285). They are a great host and with Fantastico, installing and updating Wordpress is amazingly simple.
 
 Recently, I have been getting emails from this client's account stating that the bandwidth has been exhausted. I thought to myself, "How could this be? Their account is suspended for lack of payment?!" Their website points to a suspended page with a `.htaccess` redirecting all traffic to `suspended.php`.
 
-# The Proof
+## The Proof
 
 Take a look at this screenshot:
 
@@ -36,7 +36,7 @@ I took to the `access_logs` to figure out what this traffic was. This is what we
 
 As you can see above, Bing kept crawling out page but because of the 301 Redirect it got caught in a loop. It's interesting that only Bing experienced the issue, and not Yahoo, Google or any of the hundreds of other crawlers.
 
-# The Fix:
+## The Fix:
 
 I made a change to the `robots.txt` file. The below configuration allows all bots but MSN to crawl your site.
 

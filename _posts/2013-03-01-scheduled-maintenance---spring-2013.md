@@ -2,10 +2,10 @@
 layout: post
 permalink: /scheduled-maintenance-spring-2013
 title: "Scheduled Maintenance - Spring 2013"
-category: ["scheduled-maintenance"]
+category: "State Of"
 tags: cleanup redesign refactoring scheduled-maintenance-2 spring-2013
 ---
-## That time of time the year
+### That time of time the year
 
 It's March, which means Spring is right around the corner. In parallel to the season change, we are going through some changes here at High On PHP. Life can get hectic, and blogs can become illegible or grammatically incorrect; that information can be outdated and obsolete. We are going to take this opportunity to refactor our posts and pages, which means validating and updating references. We will also deploy a new theme, and expand on some topics previous talked about. Continue reading to learn more about our scheduled maintenance.
 

@@ -2,7 +2,7 @@
 layout: post
 permalink: /testing-remote-syslog-connectivity
 title: "Testing Remote Syslog Connectivity"
-category: ["coding", "linux-system-administration", "network", "services", "syslog-services", "system-administration"]
+category: "How To"
 tags: 514 logging perl port remote syslog syslogng udp
 ---
 ## Remote Syslog

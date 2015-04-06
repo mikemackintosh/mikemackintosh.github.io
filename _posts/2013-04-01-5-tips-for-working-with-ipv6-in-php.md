@@ -2,10 +2,10 @@
 layout: post
 permalink: /5-tips-for-working-with-ipv6-in-php
 title: "5 Tips for Working with IPv6 in PHP"
-category: ["coding", "ipv6-network", "network", "php-coding"]
+category: "PHP"
 tags: 128-bit 32-bit 64-bit bits bitwise broadcast bytes databases-2 dtr_ntop dtr_pton inet_ntop inet_pton integers ip2long ipv4 ipv6 long2ip mysql-2 networks subnetting unsigned
 ---
-# IPv4 vs IPv6
+### IPv4 vs IPv6
 
 With IPv4, it was simple enough to use [`ip2long`](http://www.php.net/manual/en/function.ip2long.php) and [`long2ip`](http://www.php.net/manual/en/function.long2ip.php). These two functions would translate a dotted decimal address to an integer and the reverse respectively. In IPv6, we don't have such luxury.
 
@@ -17,7 +17,7 @@ Because of the issues addressing memory management and the simple fact that work
 
 **_Emphasis:_** IPv6 does not have a _broadcast_ per-se. In IPv4, the last available address in a range would be reserved for broadcast. In IPv6, there is no concept of a broadcast, instead it would use a multicast on the link-local for all nodes, `ff02::1`.
 
-# Tip #1: Validating IPv4 and IPv6
+## Tip #1: Validating IPv4 and IPv6
 
 This is a very simple and straightforward tip. We have been seeing many people using `strpos( $ip , ":")` to determine if an IPv6 address is identified or `substr_count( $ip , ".") == 3` to validate an IPv4 address.
 
@@ -35,7 +35,7 @@ For example:
 
 This is a surefire and safe way while not wasting resources and re-inventing the wheel. You will see a practical use of these filters later on.
 
-# Tip #2: IPv6 Conversions
+## Tip #2: IPv6 Conversions
 
 The following two functions were introduced in PHP 5.1.0, [`inet_pton`](http://php.net/manual/en/function.inet-pton.php) and [`inet_pton`](http://php.net/manual/en/function.inet-ntop.php). Their purpose is to convert human readable IP addresses into their packed `in_addr` representation. Since the result is not pure binary, we need to use the `unpack` function in order to apply bitwise operators.
 
@@ -71,7 +71,7 @@ We demonstrate above that the `inet_*` family supports both IPv6 and v4. Our nex
 
 After the unpacking and packing, we can see we achieved the same result as input. This is a simple proof of concept to ensure we are not losing any data.
 
-# Tip 3: Ready-Made Functions
+## Tip 3: Ready-Made Functions
 
 We are huge proponents of DRY. DRY is a mentality in coding where you _Don't Repeat Yourself_. Functions, classes and more are perfect examples on how to apply the DRY coding ideology. As a result, we created the two functions below to clean-up userland code.
 
@@ -180,7 +180,7 @@ Lastly, we have an invalid IPv6 address:
       echo $e->getMessage(). "\n";
     }
 
-# Tip #4: AND'ing and OR'ing
+## Tip #4: AND'ing and OR'ing
 
 Here are a few sample formulas used to calculate different aspects of a network:
 
@@ -225,7 +225,7 @@ The response would be:
     string(18) "fe80:1:2:3:a:ba0::"
     string(26) "fe80:1:2:3:a:baf:ffff:ffff"
 
-# Tip #5: Working with Databases
+## Tip #5: Working with Databases
 
 If you have a dynamic need to store IP addresses in string notation to your database, your best bet would be a `VARCHAR(39)`. If you want to store the binary version of the IP, use a `VARBINARY(39)`. This allows for enough storage to be provisioned to hold an entire IPv6 address.
 
@@ -237,7 +237,7 @@ This is a stable and safe way of storing addresses in a database table. As you c
 
 If you cannot install UDF's in MySQL, you can always store `dtr_pton`'s output. By doing so, you can perform bitwise operations in your MySQL statement and return the result within your query. This is very helpful for large databases and applications which need IPv6 support.
 
-# Putting It All Together
+## Putting It All Together
 
 With our primary focus being on networking, security and device management, we have been been engulfed in IPv6 for quite some time. We have hit the same hurdles as everyone else, and face-palmed just as much. You can download a `.tar.gz` version (coming soon) of all the functions or install the package and stay updated using [Composer](http://getcomposer.org/).
 

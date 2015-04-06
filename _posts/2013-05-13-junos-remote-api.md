@@ -1,11 +1,11 @@
 ---
 layout: post
 permalink: /junos-remote-api-scripting
-title: "JUNOS Remote API"
-category: ["coding", "junos", "linux-system-administration", "slax", "system-administration"]
+title: "Communicate with the JUNOS Remote API"
+category: "How To"
 tags: api ex firewall juniper juniper-networks junos-2 mx remote-execution security slax-2 srx xslt
 ---
-# Remotely Executing Commands on JUNOS
+### Remotely Executing Commands on JUNOS
 
 Those who are familiar with Juniper and their software known as JUNOS, may not know about the extendability of the platform using SLAX. You can read about SLAX on [Juniper's website](http://www.juniper.net/techpubs/en_US/junos11.2/topics/concept/junos-script-automation-slax-overview.html).
 
@@ -17,7 +17,7 @@ To extend SLAX and JUNOS even further, Juniper's Phil Shafer released [Juise](ht
 
 The following will document how to configure and install juise and it's dependencies.
 
-# Install lib-ssh2 Dependencies
+## Install lib-ssh2 Dependencies
 
 Honestly, you can do without this one, but it does add some more features. Libssh2 is an open-source SSH2 library with an amazingly easy-to-use API. For the sake of consistency for the rest of the post, we will configure this is a general location so other packages and depend on it.
 
@@ -30,7 +30,7 @@ You can install it by doing the following:
     make
     sudo make install
 
-# Install libslax Dependency
+## Install libslax Dependency
 
 [libslax](https://code.google.com/p/libslax/) is the library surrounding Juniper's SLAX language. libslax will allow you to execute, debug and validate syntax of SLAX scripts. To install it, complete the following:
 
@@ -41,7 +41,7 @@ You can install it by doing the following:
     make
     sudo make install
 
-# Install Juise
+## Install Juise
 
 Follow the following steps to install Juise. It depends on the previous libraries which we built and installed:
 
@@ -54,7 +54,7 @@ Follow the following steps to install Juise. It depends on the previous librarie
 
 To add Juise to your `$PATH`, run: `export PATH=$PATH:/usr/local/juise/bin`. You can also add this to `.bashrc` or `/etc/profile` so Juise is available across shell sessions.
 
-# Putting it all together
+## Putting it all together
 
 To execute a command with Juise, you can run `juise test.slax`.
 

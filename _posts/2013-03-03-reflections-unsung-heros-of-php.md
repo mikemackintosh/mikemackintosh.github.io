@@ -2,10 +2,10 @@
 layout: post
 permalink: /reflections-unsung-heros-of-php
 title: "Reflections: Unsung Hero's of PHP"
-category: ["coding", "php-coding"]
+category: "PHP"
 tags: class function method object patterns php-2 php5-3 php5-4 reflection
 ---
-## What are Reflections?
+### What are Reflections?
 
 First off, if you don't know what Reflections are, you should take a quick walk through the [PHP: Reflection](http://php.net/manual/en/book.reflection.php "PHP: Reflection") manual. You have been missing out. Reflections are some of the most powerful shadow features in current generation ( >= PHP5.3).
 
@@ -53,8 +53,6 @@ Here is a simple example using a sample class:
     echo $class->callMethod(); // returns 'foo reflected bar'
 
 The above will create an instance of `ExampleClassToReflect` and pass the arguments `foo` and `bar` to it's constructor. You can then use the variable `$class` just as if you called the class using the `new` keyword.
-
-## How are they the future?
 
 ## Conclusion
 

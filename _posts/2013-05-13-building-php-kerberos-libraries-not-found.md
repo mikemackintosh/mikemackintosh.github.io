@@ -2,10 +2,10 @@
 layout: post
 permalink: /kerberos-libraries-not-found
 title: "Building PHP: Kerberos libraries not found"
-category: ["uncategorized"]
-tags: 
+category: "Gotcha"
+tags: php kerberos ubuntu
 ---
-# Adding IMAP Support to PHP
+### Adding IMAP Support to PHP
 
 The other day I was working on a project which required PHP to be compiled with IMAP and IMAP-SSL. Normally, this is part of my standard PHP build, but on this platform, I compiled PHP to be as lightweight as possible. Before I rebuilt PHP, I made sure to install `courier-imap` and `courier-imap-ssl` packages as well as `libkrb5-dev`. Kerberos is required for IMAP's extension in PHP.
 
@@ -15,7 +15,7 @@ When I ran `./configure` on PHP, it kept coming back with nonesense of **_"Kerbe
 
 Since I was on a strict timeline to deliver my milestones, I used some standard knowledge of Linux and simply read the output. The output gave references to 3 directories which configure will look for the libraries in as well as a `krb5-config` program which stores many details about kerberos. I took these ideas and applied them, which are documented below.
 
-# Finding Your Kerberos Libraries
+## Finding Your Kerberos Libraries
 
 If this is the issue you are encountering, you will see the following when you add `--with-kerberos` to your `./configure` for PHP:
 
@@ -61,7 +61,7 @@ We will now run the same command but pass this new option:
 
 If you look at the response, you will see that the kerberos library files are located in `/usr/lib/x86_64-linux-gnu`.
 
-# Creating a Fix
+## Creating a Fix
 
 A simple fix, is link your kerberos files to one of the predetermined paths. We will use our newly discovered path in a symbolic-link command:
 
@@ -74,7 +74,7 @@ The next time you run, it will not complain about missing kerberos library files
 
     ./configure --with-kerberos
 
-# Summary
+## Summary
 
 It's unfortunate that people don't take the time to read output and perform some command-line-foo. Doing so really does give you the opportunity to learn, understand and troubleshoot more effectively.
 

@@ -2,7 +2,7 @@
 layout: post
 permalink: /installing-rockstack-mac
 title: "Installing Rockstack On Mac"
-category: ["coding", "dev-tools", "linux-system-administration", "mac-osx", "php-coding", "ruby"]
+category: "OS X"
 tags: devenv mac perl php-2 rock rockstack ruby-2
 ---
 ### Introduction

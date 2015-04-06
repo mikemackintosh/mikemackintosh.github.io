@@ -2,7 +2,7 @@
 layout: post
 permalink: /managing-nginx-with-nginxmgr
 title: "Managing Nginx With nginxmgr"
-category: ["linux-system-administration", "network", "services", "system-administration", "web-servers"]
+category: "How To"
 tags: http https nginx ruby-2 web-server
 ---
 ### Making Nginx Easier To Manage

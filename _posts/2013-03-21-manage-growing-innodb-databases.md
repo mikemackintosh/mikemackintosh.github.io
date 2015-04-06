@@ -2,14 +2,14 @@
 layout: post
 permalink: /manage-growing-innodb-databases
 title: "Manage Growing InnoDB Databases"
-category: ["databases", "mysql-databases"]
-tags: database export file-size import innodb mysql-2 mysqldump reconcile resize shrink xtradb
+category: "System Administration"
+tags: database export file-size import innodb mysql mysqldump reconcile resize shrink xtradb
 ---
-# InnoDB File Size Management
+### InnoDB File Size Management
 
 We are a PerconaDB shop here. We love MySQL, InnoDB and many of the benefits they bring to the table. We have umteen number of articles written for them as well. An intelligently designed database can save you time and money, and a poorly designed one can hurt your bottom line.
 
-# A Few Solutions
+## A Few Solutions
 
 **_Note_** : Not all solutions are applicable to your issue. Please use logic and your best judgement in the event one of the below solutions is applicable.
 
@@ -38,7 +38,7 @@ At this point, I would encourage you to make the changes provided in Solution 1.
 
 If you are not confident with using `rm -rf` within your MySQL directory, you can delete the `ib_logx` files and just rename your `ibdatax` files to `ibdatax.old`. You can delete the backup once your data is reimported.
 
-# Summary
+## Summary
 
 We use this method fairly regularly on some polling systems within our network. We reach around 3 Million tables a month, and the `ibdata1` file has reached upwards of 290GB. Let us know if this came in handy for you!
 

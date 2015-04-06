@@ -1,11 +1,11 @@
 ---
 layout: post
 permalink: /adding-video-support-to-wordpress-media-gallery
-title: "Adding Video Support to Wordpress Media Gallery"
-category: ["coding", "php-coding", "wordpress-coding"]
+title: "Add Video Support to Wordpress Media Gallery"
+category: "How To"
 tags: gallery pictures videos wordpress wp
 ---
-# Wordpress Galleries
+### Introduction
 
 [Wordpress](http://www.wordpress.com) comes out-of-the-box with hundreds of really well implemented features. It's one of the reasons it is the leading blogging software used today. One of the features we will focus on is the built in Wordpress Gallery.
 
@@ -25,7 +25,7 @@ To add a gallery to a post, you can follow the below steps:
 
 If you have noticed though, you can only add Images. If you have uploaded videos to your Media, you cannot add them to a gallery.
 
-# The Fix:
+## The Fix:
 
 The change we need to make is located within the function `wp_ajax_query_attachments()`. This function is located within the file, `wp-admin/includes/ajax-actions.php`. You can do a search for this function, or look at or around line `1835`.
 
@@ -41,7 +41,7 @@ To:
 
 Removing the `'post_mime_type'` array index from this query will not add a constraint your media library to `image/%` mime types.
 
-# Summary
+## Summary
 
 If you go back to a post, you can add or edit a gallery and now videos will display. By default, thumbnails are not created for your videos which you upload. I would suggest the [Video Embed and Thumbnail Generator](http://www.kylegilman.net/2011/01/18/video-embed-thumbnail-generator-wordpress-plugin/) plugin to handle this.
 

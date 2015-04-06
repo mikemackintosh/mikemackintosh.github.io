@@ -2,7 +2,7 @@
 layout: post
 permalink: /http-proxy-authentication-from-cli
 title: "HTTP Proxy Authentication From CLI"
-category: ["browsers", "linux-system-administration", "network", "system-administration"]
+category: "How To"
 tags: authenticate headless http proxy secure servers www-authenticate
 ---
 # HTTP Proxies
