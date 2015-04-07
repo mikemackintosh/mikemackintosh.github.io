@@ -4,6 +4,8 @@ permalink: /allowing-multiple-accounts-email-wordpress
 title: "Allow Multiple Accounts with Same Email in WordPress"
 category: "How To"
 tags: account email multiple-emails registration wordpress
+redirect_from:
+ - /allowing-multiple-accounts-with-same-email-in-wordpress
 ---
 ### Introduction
 

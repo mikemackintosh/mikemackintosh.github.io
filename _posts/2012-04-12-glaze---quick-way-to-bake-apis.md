@@ -2,8 +2,10 @@
 layout: post
 permalink: /glaze-quick-way-to-bake-apis
 title: "Glaze - Quick Way To Bake API's"
-category: ["uncategorized"]
+category: "Project"
 tags: apache-2 api getglaze glaze hosted mobilefrosting percona php-2 www-mobilefrosting-com yumglaze
+redirect_from:
+ - /glaze---quick-way-to-bake-apis
 ---
 # What is Glaze?
 Glaze is a newely launched service designed to take the legwork out of creating an API. It uses an easy-to-use, intuitive interface to guide you for the most part on how to create an API, controller, modifier and output data. We haven't seen anything like this before, and it's use comes in handy. You can get in touch with that at [www.mobilefrosting.com](http://www.mobilefrosting.com) or [www.yumglaze.com](http://www.yumglaze.com). You can follow them on twitter at [http://twitter.com/yumglaze](http://twitter.com/yumglaze). 

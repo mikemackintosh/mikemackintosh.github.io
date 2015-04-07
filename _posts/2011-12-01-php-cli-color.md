@@ -4,6 +4,8 @@ permalink: /cli-coloring-with-php
 title: "PHP CLI Color"
 category: "PHP"
 tags: bash color-app-logging color-bash-php color-bash-prompt color-cli color-php-cli color-promtp colored-application-logging colored-bash-script-php php-bash-color php-cli php-cli-color php-cli-colors php-color-bash php-color-output-text php-file-colors php-logging shell text-output-color-file xterm
+redirect_from:
+ - /php-cli-color
 ---
 ### Introduction
 

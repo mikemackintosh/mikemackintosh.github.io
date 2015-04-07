@@ -4,6 +4,8 @@ permalink: /sotw-password-management
 title: "#1 - Password Management"
 category: "Security Tip of the Week"
 tags: passphrase password-management passwords security
+redirect_from:
+ - /stow-1---password-management
 ---
 ### Introduction
 
