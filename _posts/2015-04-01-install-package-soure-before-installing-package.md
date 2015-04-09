@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Install Package Source Before Installing Package"
+title: "Installing Package Dependencies in your Cookbook"
 category: Chef
 tags: chef system-administration sysadm config configuration-management automation apt yum rpm
 ---
