@@ -9,7 +9,7 @@ redirect_from:
 
 ### Introduction
 
-Slack is the finest messaging and chat platform to find itself entangled in the world wide web since the dot com boom. If you don't know what I'm talking about, then you're a n00b. Check them out at [www.slack.com](https://slack.com/).
+Slack is the finest messaging and chat platform to find itself entangled in the world wide web since the dot com boom. They have a free-tier, which allows for unlimited people, but integrations like Google Apps and webhooks are limited. Check them out at [www.slack.com](https://slack.com/).
 
 ![SlackUI](https://www.dropbox.com/s/1veqca2kr0ez8a4/Screenshot%202015-02-22%2022.05.59.png?dl=1)
 
@@ -33,8 +33,7 @@ I created the gem to allow for really simple integration into Slack. Some of the
 See examples of pre-formated alerts in the [examples/formatted/](https://github.com/mikemackintosh/slackdraft/tree/master/examples/formatted).
 
 ## Ruby Usage
-
-Usage is very simple:
+Using the gem is very simple. Here is an example:
 
 ```
 require 'slackdraft'
@@ -65,7 +64,7 @@ For more examples, see the `examples/` directory.
 
 ## Command-line Usage
 
-It's dumb simple. Instead of using `curl`, use this:
+Seriously, it's just as simple. Instead of using `curl`, use this:
 
 ```
 slackdraft -u mike \

@@ -7,11 +7,11 @@ tags: barnyard2 ids mysql view security snort
 ---
 ### Introduction
 
-I've been working on a Snort project recently and started logging alerts to a MySQL database. The Barnyard2 MySQL schema is great and effective, but since I don't have time in my sprints to rewrite the tool in a way that would work best for me, I just tossed together a quick view. This way, a simple Sinatra ruby app can use active record to pull the data is a simple query rather than a million joins in your app's source code:
+I've been working on a Snort project recently and started logging alerts to a MySQL database. The Barnyard2 MySQL schema is great and effective, but since I don't have time in my sprints to rewrite the tool in a way that would work best for me, I just tossed together a quick view. This way, a simple Sinatra app can use active record to pull the data is a simple query rather than a million joins in your app's source code.
 
 ## The SQL
 
-Because I only wanted 1 query for both TCP and UDP/Other, I left join both of the tables and if it's TCP I will output the data, else null. Some of the columns may not be the best named, as that's the downside to rapid development.
+Because I only wanted 1 query for both TCP and UDP/Other, I `left join` both of the tables and if the packet protocol is TCP, I will output the data, else null. Some of the columns may not be the best named, as that's the downside to rapid development.
 
     select
         e.sid,
@@ -55,7 +55,7 @@ Because I only wanted 1 query for both TCP and UDP/Other, I left join both of th
     left join tcphdr as tcp on tcp.cid=e.cid
     left join udphdr as udp on udp.cid=e.cid
 
-You will also get a column of `sensor_encoding` which will tell you how to decode the `payload` column. Leave this out of the MySQL query to speed it up, especially if you are pushing as many packets as we are.
+You will also get a column named `sensor_encoding` which will tell you how to decode the `payload` column. Leave this out of the MySQL query to speed it up, especially if you are pushing as many packets as we are.
 
 Enjoy.
 

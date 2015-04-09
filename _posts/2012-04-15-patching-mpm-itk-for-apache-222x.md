@@ -16,8 +16,14 @@ tags: apache-2 apache-mpm itk mpm mpm-itk prefork worker
 Download the [Monolithic Patch](http://www.highonphp.com/downloads/apache2.2-mpm-itk-2.2.22.patch) [Here](http://www.highonphp.com/downloads/apache2.2-mpm-itk-2.2.22.patch)
 
 ### How To Use
-Follow the steps below to apply the patch.
+
+First, we need to `wget` the patch:
 
     // Enter directory with apache source files 
     wget http://www.highonphp.com/downloads/apache2.2-mpm-itk-2.2.22.patch 
+
+To patch the file, we are going to use the `patch` command:
+
     patch -p1 
+
+Once patched, updated your configuration and restart Apache.
