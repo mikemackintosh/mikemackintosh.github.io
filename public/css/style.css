@@ -87,13 +87,13 @@ blockquote p:last-child {
   }
 }
 
-pre {
+/*pre {
   background: #f6f6f6 !important;  
-}
+}*/
 
 pre code {
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   font-size: 12px !important;
   font-weight: normal !important;
-  color: #535353 !important;
+  /*color: #535353 !important;*/
 }

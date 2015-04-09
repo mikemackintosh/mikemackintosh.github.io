@@ -14,7 +14,7 @@ Sometimes, your private and public keys get lost. If you lose your private key, 
 
 If you lose your public key, no fear! You can easily regenerate your public key from a private key using the following command:
 
-```
+```bash
 ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 ```
 

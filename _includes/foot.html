@@ -35,6 +35,10 @@
       
       <script>
       jQuery( document ).ready(function() {
+        $('pre').each(function(k,v){
+          $(this).addClass('prettyprint');
+          prettyPrint();
+        });
         /*var max_height = 0;
         $(".front-block").each(function(k){
           if( $(this).height() > max_height ){
@@ -46,6 +50,7 @@
       </script>
       
       <script type="text/javascript" src="/public/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="/public/jquery/prettify.js"></script>
       
       <script type="text/javascript">
         var _gauges = _gauges || [];
